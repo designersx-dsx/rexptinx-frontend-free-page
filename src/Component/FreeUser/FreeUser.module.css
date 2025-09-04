@@ -8,9 +8,10 @@
 }
 
 .container {
-    width: 100%;    /* full width */
-    max-width: 1200px; /* apne hisaab se limit */
-    height: 400px;  /* height adjust karlo */
+    width: 100%;    
+    height: 100dvh;
+
+ 
 }
 
 .ShapeDiv {
@@ -28,10 +29,9 @@
     /* masking */
     -webkit-mask-image: url('/public/Images/shape1.png');
     -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: cover;   /* full container ko cover karega */
+    -webkit-mask-size: cover;
     -webkit-mask-position: center;
     background-color: gray;
-
     mask-image: url('/public/Images/shape1.png');
     mask-repeat: no-repeat;
     mask-size: cover;
@@ -40,9 +40,8 @@
 
 .gifDiv img {
     position: absolute;
-    right: 15%;         /* GIF ko 15% right se shift */
-    top: 0;
-    width: 100%;        /* pura container cover kare */
-    height: 100%;
-    object-fit: cover;  /* stretch/crop karke cover kare */
+    right: 5%;  
+    bottom: 0;
+    width: 40%;  
+    object-fit: cover;  
 }
