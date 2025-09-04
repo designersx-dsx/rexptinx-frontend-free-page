@@ -3,4 +3,30 @@ body {
 
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 
+  font-family: "Lato", sans-serif;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+
+  --subtitle-color: #24252C;
+  --title-size: clamp(28px, 5.5vw, 100px);
+  --title-line-height: calc(var(--title-size) * 1.1);
+
+  --subtitle-size: clamp(16px, 2vw, 60px);
+  --subtitle-line-height: calc(var(--subtitle-size) * 1.1);
+
+  --p-size: clamp(14px, 1.5vw, 25px);
+  --p-color:  #24252C;
+  --p-color2: #ffffff;
+}
