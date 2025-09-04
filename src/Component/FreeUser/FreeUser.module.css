@@ -28,11 +28,13 @@
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   -webkit-mask-position: center;
-  background-color: gray;
+  
   mask-image: url("/public/Images/shape1.png");
   mask-repeat: no-repeat;
   mask-size: cover;
   mask-position: center;
+  background-color: gray;
+  background-image: linear-gradient(to right, #424C4D 2%, #989898 40%);
 }
 
 .gifDiv img {
