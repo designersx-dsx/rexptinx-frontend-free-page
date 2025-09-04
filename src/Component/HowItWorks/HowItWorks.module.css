@@ -1,0 +1,117 @@
+.containerBox {
+    padding-inline: 20px;
+    margin-top: 10rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+.TopBar {
+    text-align: center;
+    position: relative;
+}
+
+.Title {
+    position: relative;
+}
+
+.strokeText {
+    font-size: clamp(40px, 15vw, 225px);
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px #8a2be2;
+
+}
+
+.Strip {
+    position: absolute;
+    bottom: 15%;
+    height: 80px;
+    background-image: linear-gradient(#ffffff15, #ffffff);
+    z-index: 11;
+    margin-top: 0;
+    width: 100%;
+}
+
+.subtitle {
+    font-size: var(--subtitle-size);
+    line-height: var(--subtitle-line-height);
+    color: var(--subtitle-color);
+    font-weight: 600;
+    margin-inline: auto;
+    width: 55%;
+}
+
+
+
+.timelineWrapper {
+  position: relative;
+  padding: 20px;
+}
+
+.curveLine {
+  position: absolute;
+  left: 75px; 
+  top: 0;
+  width: 50px;
+  height: 100%;
+  pointer-events: none;
+}
+
+.timelineContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 100px; 
+  position: relative;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  position: relative;
+}
+
+.leftIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftIcon img {
+  width: 30px;
+  height: 30px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #6c4ef7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.content h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.content p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
