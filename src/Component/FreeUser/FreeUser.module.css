@@ -9,7 +9,7 @@
 .container {
   width: 100%;
   height: 100dvh;
-  
+
 }
 
 .ShapeDiv {
@@ -29,13 +29,14 @@
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   -webkit-mask-position: center;
-
   mask-image: url("/public/Images/shape1.png");
   mask-repeat: no-repeat;
   mask-size: cover;
   mask-position: center;
-  background-color: gray;
-  background-image: linear-gradient(to right, #424c4d 2%, #989898 40%);
+  background-image: url("/public/Images/office-shape.png");
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .gifDiv img {
@@ -45,41 +46,51 @@
   width: 42%;
   object-fit: cover;
 }
+
 .LeftSideSection {
   position: absolute;
   color: #fff;
-
   max-width: 1400px;
   left: 0;
   right: 0;
   margin: auto;
-  top: 10%;
+  top: 8%;
 }
+
 .TextFreeUserSection {
   /* width: 50%; */
 }
+
 .TextFreeUserSection h1 {
   font-size: var(--title-size);
   font-weight: 400;
   margin-bottom: 1rem;
+  color: #24252C;
 }
+
 .TextFreeUserSection h1 .FreeText {
   text-decoration: underline;
   font-weight: 800;
+  color: #6524EB;
 }
+
 .TextFreeUserSection h2 {
   font-size: 135px;
-  font-weight: 200;
+  font-weight: 300;
   width: 65%;
   line-height: 85px;
+  color: #24252C;
 }
+
 .INText {
   font-size: 55px;
-  font-weight: 200;
+  font-weight: 300;
 }
+
 .INText b {
   font-weight: 800;
 }
+
 .CTASection {
   background-color: #fff;
   border-radius: 45px;
@@ -90,28 +101,45 @@
   margin-top: 2rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
 .CTATextSection {
   width: 60%;
 }
+
 .CTATextSection p {
   font-size: var(--p-size);
   margin-bottom: 1rem;
   font-weight: 500;
 }
+
 .CTATextSection li {
   font-size: 18px;
   margin-bottom: 0.5rem;
 }
+
 .CTATextSection ul {
-    padding-left: 1.2rem
+  padding-left: 1.2rem
 }
-.CTAVideo{
-    width: 50%;    
-    border-radius: 20px;
+
+.joinBtn {
+  margin-top: 4rem;
 }
-.VideoBox img{
-    width: 100%;
-    max-width: 100%;
+
+.joinBtn {
+  width: 100%;
+}
+.joinBtn img{
+  width: 90%;
+}
+
+.CTAVideo {
+  width: 50%;
+  border-radius: 20px;
+}
+
+.VideoBox img {
+  width: 100%;
+  max-width: 100%;
 
 }
 

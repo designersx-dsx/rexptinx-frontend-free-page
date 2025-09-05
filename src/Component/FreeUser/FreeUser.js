@@ -37,6 +37,10 @@ const FreeUser = () => {
                 <b>Nurture leads</b> and boost sales
               </li>
             </ul>
+
+            <div className={styles.joinBtn}>
+              <img src="Svg/join-rexpt.svg" alt="join-rexpt"/>
+            </div>
           </div>
           <div className={styles.CTAVideo}>
             <div className={styles.VideoBox}>

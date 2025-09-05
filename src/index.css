@@ -10,6 +10,7 @@ h5,
 h6 {
   font-family: "Lato", sans-serif;
   margin: 0px;
+  color: #24252C;
 }
 
 p,
@@ -17,6 +18,7 @@ ul,
 li {
   font-family: "Inter", sans-serif;
   margin: 0px;
+  color: #24252C;
 }
 
 .spanText {
@@ -34,6 +36,7 @@ li {
   --subtitle-size: clamp(16px, 3.5vw, 60px);
   --subtitle-line-height: calc(var(--subtitle-size) * 1.1);
   --p-size: clamp(14px, 1.5vw, 25px);
+  --p2-size: clamp(14px, 1.5vw, 20px);
   --p-color: #24252c;
   --p-color2: #ffffff;
 }
