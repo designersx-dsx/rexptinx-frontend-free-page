@@ -1,6 +1,42 @@
 body {
   margin: 0;
-
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+  margin: 0px;
+  color: #24252C;
+}
 
+p,
+ul,
+li {
+  font-family: "Inter", sans-serif;
+  margin: 0px;
+  color: #24252C;
+}
+
+.spanText {
+  background: linear-gradient(90deg, #6524eb 36%, #ba97ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+:root {
+  --subtitle-color: #24252c;
+  --title-size: clamp(28px, 5.5vw, 100px);
+  --title-line-height: calc(var(--title-size) * 1.1);
+  --subtitle-size: clamp(16px, 3.5vw, 60px);
+  --subtitle-line-height: calc(var(--subtitle-size) * 1.1);
+  --p-size: clamp(14px, 1.5vw, 25px);
+  --p2-size: clamp(14px, 1.5vw, 20px);
+  --p-color: #24252c;
+  --p-color2: #ffffff;
+}

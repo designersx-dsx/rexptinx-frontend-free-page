@@ -1,0 +1,47 @@
+.containerBox {
+    padding-inline: 20px;
+    margin-top: 15rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+.LeftSection {
+    width: 50%;
+
+}
+
+.Section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.sectinIcon {
+    /* width: 15%; */
+}
+
+.sectinIcon img {
+    width: 100%;
+}
+
+.RightSection {
+    width: 50%;
+  
+}
+.content{
+    padding-left: 2rem;
+}
+.content h1,
+h2 {
+    font-size: clamp(20px, 2.5vw, 45px);
+    font-weight: 600;
+}
