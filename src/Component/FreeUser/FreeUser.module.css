@@ -25,17 +25,17 @@
   overflow: hidden;
 
   /* masking */
-  -webkit-mask-image: url("/public/Images/shape1.png");
+  -webkit-mask-image: url("/public/Images/shape2.png");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   -webkit-mask-position: center;
-  mask-image: url("/public/Images/shape1.png");
+  mask-image: url("/public/Images/shape2.png");
   mask-repeat: no-repeat;
   mask-size: cover;
   mask-position: center;
   background-image: url("/public/Images/office-shape.png");
   background-size: cover, cover;
-  background-position: center, center;
+  background-position: top 40px right 0px;
   background-repeat: no-repeat, no-repeat;
 }
 
@@ -54,7 +54,7 @@
   left: 0;
   right: 0;
   margin: auto;
-  top: 8%;
+  top: 11%;
 }
 
 .TextFreeUserSection {
@@ -114,7 +114,7 @@
 
 .CTATextSection li {
   font-size: 18px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .CTATextSection ul {
@@ -128,7 +128,8 @@
 .joinBtn {
   width: 100%;
 }
-.joinBtn img{
+
+.joinBtn img {
   width: 90%;
 }
 
