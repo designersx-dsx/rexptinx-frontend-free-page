@@ -1,0 +1,138 @@
+.containerBox {
+    margin-top: 15rem;
+    padding-inline: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.LeftSection {
+    /* border: 1px solid; */
+    position: relative;
+    width: 50%;
+    margin-top: 3rem;
+}
+
+.Title {
+    position: relative;
+}
+
+.strokeText {
+    font-size: clamp(40px, 5.5vw, 100px);
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px #8a2be2;
+
+}
+
+.Strip {
+    position: absolute;
+    bottom: 0%;
+    height: 80px;
+    background-image: linear-gradient(#ffffff15, #ffffff);
+    z-index: 11;
+    margin-top: 0;
+    width: 100%;
+}
+
+.subtitle {
+    font-size: var(--subtitle-size);
+    line-height: var(--subtitle-line-height);
+    color: var(--subtitle-color);
+    font-weight: 600;
+    width: 90%;
+}
+
+.description p {
+    font-size: var(--p2-size);
+}
+
+
+
+
+.RightSection {
+    /* border: 1px solid; */
+    width: 50%;
+}
+
+.sliderWrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem 0;
+}
+
+/* equal gap between cards */
+.slick-slide {
+    padding: 0 15px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 20px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem;
+    /* smooth animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+}
+
+.stars {
+    font-size: 1.3rem;
+    color: #f5c518;
+    margin-bottom: 1rem;
+}
+
+.text {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.author {
+    font-weight: 600;
+    margin-top: 1rem;
+    color: #111;
+}
+
+.bothBtn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.LeftBtn,
+.RightBtn {
+    height: 60px;
+    width: 60px;
+    background-color: #F5F5F5;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.LeftBtn:hover,
+.RightBtn:hover {
+    background-color: #ddd;
+    transform: scale(1.1);
+}
