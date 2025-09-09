@@ -1,0 +1,329 @@
+.containerBox {
+    margin-top: 15rem;
+    padding-inline: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.topSection {
+    position: relative;
+    margin-inline: auto;
+    width: 60%;
+    text-align: center;
+}
+
+.Title {
+    position: relative;
+
+}
+
+.strokeText {
+    font-size: clamp(40px, 5.5vw, 100px);
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px #8a2be2;
+
+}
+
+.Strip {
+    position: absolute;
+    bottom: 0%;
+    height: 80px;
+    background-image: linear-gradient(#ffffff15, #ffffff);
+    z-index: 11;
+    margin-top: 0;
+    width: 100%;
+}
+
+.subtitle {
+    font-size: var(--subtitle-size);
+    line-height: var(--subtitle-line-height);
+    color: var(--subtitle-color);
+    font-weight: 600;
+    margin-inline: auto;
+}
+
+.sectionCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+    margin-top: 5rem;
+    gap: 4rem;
+}
+
+.LeftSection {
+    /* border: 1px solid; */
+    width: 40%;
+    background-color: #F6F3FF;
+    padding: 20px;
+    border-radius: 40px;
+    overflow: hidden;
+    transition: transform 0.4s ease-in-out;
+    border: 1px solid #F6F3FF;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.LeftSection:hover {
+    transform: scale(1.02);
+    border: 1px solid #5E4491;
+}
+
+/* shine effect */
+.LeftSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0.2) 100%);
+    transform: skewX(-25deg);
+}
+
+.LeftSection:hover::before {
+    animation: shineMove 1s forwards;
+}
+
+@keyframes shineMove {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
+
+.content {
+    padding: 3rem;
+    color: #24252C;
+}
+
+.subheading h3 {
+    font-size: 30px;
+}
+
+.desc p {
+    font-size: 22px;
+    padding-top: 30px;
+}
+
+.customerImg img {
+    width: 100%;
+}
+
+
+
+.RightSection {
+    width: 60%;
+    /* border: 1px solid; */
+}
+
+.costEffective h3 {
+    font-size: 30px;
+}
+
+.costEffective p {
+    font-size: 22px;
+    width: 90%;
+}
+
+.costEffectiveImg img {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.part1 {
+    border-radius: 40px;
+    background-color: #FFEAF2;
+    padding-left: 20px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.part1:hover {
+    transform: scale(1.02);
+    border: 1px solid #ffb9d4;
+}
+
+/* shine effect */
+.part1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0.2) 100%);
+    transform: skewX(-25deg);
+}
+
+.part1:hover::before {
+    animation: shineMove 1s forwards;
+}
+
+
+
+
+
+.costEffective {
+    display: grid;
+    gap: 1rem;
+    padding-block: 20px;
+    padding-left: 20px;
+}
+
+.bothpart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    gap: 4rem;
+    width: 100%;
+}
+
+
+.SecureReliable {
+    width: 50%;
+    border-radius: 40px;
+    background-color: #FFFAE2;
+    padding-block: 20px;
+    padding-left: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease-in-out;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+/* hover effect */
+.SecureReliable:hover {
+    transform: scale(1.02);
+    border: 1px solid #f0d97c;
+}
+
+/* shine effect */
+.SecureReliable::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0.2) 100%);
+    transform: skewX(-25deg);
+}
+
+.SecureReliable:hover::before {
+    animation: shineMove 1s forwards;
+}
+
+/* same keyframes */
+@keyframes shineMove {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
+
+
+.ReliableImg img {
+    width: 100%;
+}
+
+.content2 {
+    padding: 20px;
+    color: #24252C;
+}
+
+.content2 h3 {
+    font-size: 30px;
+    color: #24252C;
+    margin-bottom: 1rem;
+}
+
+.content2 p {
+    font-size: 22px;
+
+}
+
+.Multiligual {
+    width: 50%;
+    border-radius: 40px;
+    background-color: #EFF5DE;
+    padding-block: 20px;
+    padding-inline: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.Multiligual:hover {
+    transform: scale(1.02);
+    border: 1px solid #e0ff8a;
+}
+
+.Multiligual::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0.2) 100%);
+    transform: skewX(-25deg);
+}
+
+.Multiligual:hover::before {
+    animation: shineMove 1s forwards;
+}
+
+.MultiligualImg img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.content3 {
+    color: #24252C;
+}
+
+.content3 h3 {
+    font-size: 30px;
+    margin-bottom: 3rem;
+
+}
+
+.content3 p {
+    font-size: 22px;
+
+}

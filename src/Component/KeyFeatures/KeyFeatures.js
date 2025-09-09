@@ -41,7 +41,7 @@ const KeyFeatures = () => {
                     </div>
 
                     <div className={styles.KeyDiv}>
-                        <img src='Svg/key-icon.svg' alt='key-icon' />
+                        <img src='Svg/keyImg.svg' alt='key-icon' />
                         <div className={styles.joinBtn}>
                             <img src="Svg/join-rexpt.svg" alt="join-rexpt" />
                         </div>

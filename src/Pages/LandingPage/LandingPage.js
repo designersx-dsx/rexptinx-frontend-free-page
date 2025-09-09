@@ -3,7 +3,7 @@ import FreeUser from '../../Component/FreeUser/FreeUser'
 import HassleFree from '../../Component/HassleFree/HassleFree'
 import HowItWorks from '../../Component/HowItWorks/HowItWorks'
 import KeyFeatures from '../../Component/KeyFeatures/KeyFeatures'
-
+import WhyRexpt from '../../Component/WhyRexpt/WhyRexpt'
 const LandingPage = () => {
   return (
     <div>
@@ -11,6 +11,7 @@ const LandingPage = () => {
       <HassleFree/>
       <HowItWorks/>
       <KeyFeatures/>
+      <WhyRexpt/>
     </div>
   )
 }
