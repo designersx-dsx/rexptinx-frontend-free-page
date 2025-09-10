@@ -232,6 +232,7 @@
   width: 90%;
   height: auto;
   display: block;
+    cursor: pointer;
 }
 
 .btn p {
@@ -258,6 +259,7 @@
   color: #6524EB;
   font-weight: 600;
   text-decoration: none;
+    cursor: pointer;
 }
 
 /* Footer */
