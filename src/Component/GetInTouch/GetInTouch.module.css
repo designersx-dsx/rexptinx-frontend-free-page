@@ -22,7 +22,7 @@
 }
 
 .LeftSection {
-    width: 50%;
+    width: 40%;
     padding: 3rem;
     margin: auto;
     display: flex;
@@ -50,7 +50,7 @@
 }
 
 .RightSection {
-    width: 50%;
+    width: 60%;
     overflow: hidden;
     position: relative;
 }
