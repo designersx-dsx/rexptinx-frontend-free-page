@@ -39,14 +39,28 @@ const FreeUser = () => {
             </ul>
 
             <div className={styles.joinBtn}>
-              <img src="Svg/join-rexpt.svg" alt="join-rexpt"/>
+              <img src="Svg/join-rexpt.svg" alt="join-rexpt" />
             </div>
           </div>
           <div className={styles.CTAVideo}>
             <div className={styles.VideoBox}>
-                <img src="/Images/CTA-Video.png" alt="ViewDemo"/>
+              <img src="/Images/CTA-Video.png" alt="ViewDemo" />
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className={styles.callWrapper}>
+        <div className={styles.iconWrapper}>
+          <div className={styles.ripple}></div>
+          <div className={styles.ripple}></div>
+          <div className={styles.iconCircle}>
+            <img src="Svg/call-blink.svg" alt="call" />
+          </div>
+        </div>
+        <div className={styles.textBox}>
+          <h5 className={styles.subText}>REX</h5>
+          <h3 className={styles.mainText}>CALL ME</h3>
         </div>
       </div>
     </div>
