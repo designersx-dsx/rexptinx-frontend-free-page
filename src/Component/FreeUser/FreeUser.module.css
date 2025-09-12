@@ -123,6 +123,7 @@
 
 .joinBtn {
   margin-top: 4rem;
+  cursor: pointer;
 }
 
 .joinBtn {
@@ -150,4 +151,105 @@
     width: 100%;
     object-fit: cover;
   }
+}
+
+
+
+
+.callWrapper {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  display: flex;
+  align-items: center;
+  background: #3DC322;
+  border-radius: 40px;
+  background: #3DC322;
+  border-radius: 40px;
+  padding: 8px 12px 8px 70px;
+  width: 130px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.iconWrapper {
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translate(-20%, -50%);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconCircle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.iconCircle img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Ripple / Blink Animation */
+.ripple {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(61, 195, 34, 0.37);
+  animation: ripple 2.5s ease-out infinite;
+  z-index: 1;
+}
+
+.ripple:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.ripple:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+
+  70% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.subText {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffff;
+}
+
+.mainText {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffff;
 }

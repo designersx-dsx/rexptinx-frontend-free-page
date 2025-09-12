@@ -6,6 +6,8 @@ import KeyFeatures from '../../Component/KeyFeatures/KeyFeatures'
 import WhyRexpt from '../../Component/WhyRexpt/WhyRexpt'
 import OurClient from '../../Component/OurClient/OurClient'
 import GetInTouch from '../../Component/GetInTouch/GetInTouch'
+// import SliderSection from '../../Component/SliderSection/SliderSection'
+import FAQ from '../../Component/FAQ/FAQ'
 const LandingPage = () => {
   return (
     <div>
@@ -16,6 +18,8 @@ const LandingPage = () => {
       <WhyRexpt/>
       <OurClient/>
       <GetInTouch/>
+      <FAQ/>
+      {/* <SliderSection/> */}
     </div>
   )
 }

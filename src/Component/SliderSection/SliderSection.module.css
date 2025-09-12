@@ -1,0 +1,134 @@
+.containerBox {
+  margin-top: 5rem;
+  padding-inline: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.sliderWrapper {
+  width: 100%;
+  margin: auto;
+  padding: 40px 0;
+  position: relative;
+  overflow: visible;
+}
+
+/* remove slick default spacing */
+.sliderWrapper .slick-slide {
+  transform: none !important;
+  margin: 0 -60px; /* overlap effect */
+}
+
+/* slide wrapper */
+.slideItem {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* base card */
+.card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px;
+  min-height: 260px;
+  width: 260px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 650ms cubic-bezier(.2,.9,.2,1), opacity 650ms ease, box-shadow 650ms ease;
+  transform-origin: center center;
+  will-change: transform, opacity;
+  position: relative;
+  opacity: 0.5; /* side slide default */
+}
+
+/* center slide */
+.center {
+  transform: scale(1) rotate(0deg);
+  opacity: 1;
+  z-index: 3;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* left slide */
+.left {
+  transform: scale(0.9) rotate(-10deg);
+  opacity: 0.7;
+  z-index: 2;
+  margin: 20px;
+}
+
+/* right slide */
+.right {
+  transform: scale(0.9) rotate(10deg);
+  opacity: 0.7;
+  z-index: 2;
+  margin-right: 0px;
+  margin-top: 15px;
+  margin-left: -10px;
+}
+
+/* far side slides */
+.side {
+  transform: scale(0.85) rotate(0deg);
+  opacity: 0.45;
+  z-index: 1;
+}
+
+/* card inner text */
+.tag {
+  display: inline-block;
+  background: #5a5df0;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.value {
+  font-size: 48px;
+  font-weight: 800;
+  color: #5a5df0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .sliderWrapper .slick-slide {
+    margin: 0 -40px;
+  }
+  .card {
+    width: 300px;
+    min-height: 240px;
+  }
+  .value {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sliderWrapper .slick-slide {
+    margin: 0 -20px;
+  }
+  .card {
+    width: 85%;
+    min-height: 220px;
+    padding: 22px;
+  }
+  .value {
+    font-size: 36px;
+  }
+}

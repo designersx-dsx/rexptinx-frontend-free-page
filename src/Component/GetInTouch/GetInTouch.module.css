@@ -1,5 +1,5 @@
 .containerBox {
-    margin-top: 15rem;
+    margin-top: 5rem;
     padding-inline: 20px;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .LeftSection {
-    width: 50%;
+    width: 40%;
     padding: 3rem;
     margin: auto;
     display: flex;
@@ -50,7 +50,7 @@
 }
 
 .RightSection {
-    width: 50%;
+    width: 60%;
     overflow: hidden;
     position: relative;
 }
@@ -94,29 +94,44 @@
 }
 
 .waveDive span:nth-child(2) {
-    animation-delay: 0.5s, 0.5s;
+    animation-delay: 0.4s, 0.4s;
 }
 
 .waveDive span:nth-child(3) {
-    animation-delay: 1s, 1s;
+    animation-delay: 0.8s, 0.8s;
 }
 
 .waveDive span:nth-child(4) {
-    animation-delay: 1.5s, 1.5s;
+    animation-delay: 1.2s, 1.2s;
 }
 
 .waveDive span:nth-child(5) {
-    animation-delay: 2s, 2s;
+    animation-delay: 1.6s, 1.6s;
 }
 
 @keyframes wave {
     0% {
-        transform: scale(1);
+        transform: scale(0.8);
         opacity: 1;
     }
 
+    25% {
+        transform: scale(1.8);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(2.2);
+        opacity: 0.6;
+    }
+
+    75% {
+        transform: scale(2.6);
+        opacity: 0.3;
+    }
+
     100% {
-        transform: scale(3);
+        transform: scale(2.8);
         opacity: 0;
     }
 }
@@ -124,6 +139,18 @@
 @keyframes colorChange {
     0% {
         border-color: white;
+    }
+
+    25% {
+        border-color: #d1b3ff;
+    }
+
+    50% {
+        border-color: #b27aff;
+    }
+
+    75% {
+        border-color: #8a3fff;
     }
 
     100% {

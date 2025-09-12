@@ -15,18 +15,18 @@ const GetInTouch = () => {
                         </div>
 
                     </div>
-                 <div className={styles.RightSection}>
-    <div className={styles.waveWrapper}>
-        <div className={styles.waveDive}>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <img src="Svg/logo-icon.svg" alt="logo-icon" className={styles.logoIcon} />
-    </div>
-</div>
+                    <div className={styles.RightSection}>
+                        <div className={styles.waveWrapper}>
+                            <div className={styles.waveDive}>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <img src="Svg/logo-icon.svg" alt="logo-icon" className={styles.logoIcon} />
+                        </div>
+                    </div>
 
 
 
