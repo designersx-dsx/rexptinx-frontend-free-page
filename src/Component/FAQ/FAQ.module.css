@@ -61,7 +61,7 @@
 .scroller {
     display: flex;
     width: max-content;
-    animation: scrollLeft 90s linear infinite;
+    animation: scrollLeft 180s linear infinite;
 }
 
 .scroller img {

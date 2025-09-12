@@ -19,10 +19,12 @@
 }
 
 .Section {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
-    justify-content: space-between;
+    justify-items: center;
     gap: 2rem;
+
 }
 
 .sectinIcon {
@@ -35,13 +37,41 @@
 
 .RightSection {
     width: 50%;
-  
+
 }
-.content{
+
+.content {
     padding-left: 2rem;
 }
+
 .content h1,
 h2 {
     font-size: clamp(20px, 2.5vw, 45px);
     font-weight: 600;
+}
+
+@media(max-width:1023px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .LeftSection {
+        width: 100%;
+    }
+}
+
+@media (max-width:650px) {
+    .container{
+        gap: 1rem;
+    }
+    .Section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .RightSection {
+        width: 100%;
+    }
+    .content{
+        text-align: center;
+    }
 }

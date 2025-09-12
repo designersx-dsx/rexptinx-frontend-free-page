@@ -49,6 +49,7 @@
 
 .LeftSideSection {
   position: absolute;
+  padding-inline: 20px;
   color: #fff;
   max-width: 1400px;
   left: 0;
@@ -75,10 +76,10 @@
 }
 
 .TextFreeUserSection h2 {
-  font-size: 135px;
+  font-size: clamp(32px, 8vw, 135px);
   font-weight: 300;
   width: 65%;
-  line-height: 85px;
+  line-height: clamp(40px, 6vw, 85px);
   color: #24252C;
 }
 
@@ -137,24 +138,42 @@
 .CTAVideo {
   width: 50%;
   border-radius: 20px;
+  overflow: hidden;
+  position: relative;
 }
 
-.VideoBox img {
+.VideoBox {
+  position: relative;
   width: 100%;
-  max-width: 100%;
-
 }
 
-@media (max-width: 600px) {
-  .gifDiv img {
-    right: 0%;
-    width: 100%;
-    object-fit: cover;
-  }
+.thumbnail {
+  position: relative;
+  cursor: pointer;
 }
 
+.thumbnail img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
 
-
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #6524EB;
+  color: white;
+  font-size: 35px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 
 .callWrapper {
   position: absolute;
@@ -252,4 +271,32 @@
   font-size: 28px;
   font-weight: 700;
   color: #ffff;
+}
+
+@media (max-width:1023px) {
+  .CTAVideo {
+    display: none;
+  }
+
+  .CTATextSection {
+    width: 100%;
+  }
+
+  .joinBtn img {
+    width: 40%;
+  }
+}
+
+@media (max-width:1400px) {
+  .gifDiv img {
+    right: 5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .gifDiv img {
+    right: 0%;
+    width: 100%;
+    object-fit: cover;
+  }
 }

@@ -1,7 +1,8 @@
-import React from "react";
+import React,{useState} from "react";
 import styles from "../FreeUser/FreeUser.module.css";
 
 const FreeUser = () => {
+    const [playVideo, setPlayVideo] = useState(false);
   return (
     <div className={styles.containerBox}>
       <div className={styles.container}>
@@ -42,11 +43,33 @@ const FreeUser = () => {
               <img src="Svg/join-rexpt.svg" alt="join-rexpt" />
             </div>
           </div>
-          <div className={styles.CTAVideo}>
-            <div className={styles.VideoBox}>
-              <img src="/Images/CTA-Video.png" alt="ViewDemo" />
+
+
+           <div className={styles.CTAVideo}>
+      <div className={styles.VideoBox}>
+        {!playVideo ? (
+          <div className={styles.thumbnail} onClick={() => setPlayVideo(true)}>
+            <img src="/Images/CTA-Video.png" alt="ViewDemo" />
+            <div className={styles.playButton}>
+              ▶
             </div>
           </div>
+        ) : (
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+        )}
+      </div>
+    </div>
+
+
+
         </div>
       </div>
 
