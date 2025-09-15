@@ -1,6 +1,13 @@
+.ForDeskTop {
+  display: block;
+}
+
+.ForMobileView {
+  display: none;
+}
+
 .containerBox {
   display: flex;
-
   align-items: center;
   width: 100%;
   height: 75dvh;
@@ -273,6 +280,14 @@
   color: #ffff;
 }
 
+
+
+@media (max-width:1400px) {
+  .gifDiv img {
+    right: 5%;
+  }
+}
+
 @media (max-width:1023px) {
   .CTAVideo {
     display: none;
@@ -285,18 +300,88 @@
   .joinBtn img {
     width: 40%;
   }
-}
 
-@media (max-width:1400px) {
-  .gifDiv img {
-    right: 5%;
+  .LeftSideSection {
+    top: 30%;
   }
 }
 
-@media (max-width: 600px) {
+/* Mobile ke liye (767px se niche) */
+@media (max-width: 650px) {
+  .ForDeskTop {
+    display: none;
+  }
+
+  .ForMobileView {
+    display: block;
+  }
+
+  .FreeUserMobileDiv {
+    position: relative;
+  }
+
+  .MobImage img {
+    width: 100%;
+  }
+
+  .AbsuluateDiv {
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+  }
+
+  .MobgifDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MobgifDiv img {
+    width: 255px;
+  }
+
+  .ContentMob {
+    padding-inline: 20px;
+  }
+
+  .h1Title {
+    font-size: clamp(35px, 12vw, 50px);
+    font-weight: 400;
+  }
+
+  .h2Title {
+    font-size: clamp(35px, 12vw, 50px);
+    font-weight: 300;
+  }
+
+  .SpanText {
+    text-decoration: underline;
+    font-weight: 600;
+    color: #6524EB;
+  }
+
+  .h5Title {
+    font-size: 30px;
+    font-weight: 300;
+  }
+
+  .spandes {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .JoiMobBtn {
+    margin-top: 1rem;
+  }
+}
+
+/* @media (max-width: 600px) {
   .gifDiv img {
     right: 0%;
     width: 100%;
     object-fit: cover;
   }
-}
+} */

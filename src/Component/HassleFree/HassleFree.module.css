@@ -1,6 +1,6 @@
 .containerBox {
     padding-inline: 20px;
-    margin-top: 15rem;
+    margin-top: 20rem;
 }
 
 .container {
@@ -50,20 +50,33 @@ h2 {
     font-weight: 600;
 }
 
-@media(max-width:1023px) {
+@media(max-width:1200px) {
+   
     .container {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        gap: 2rem;
     }
 
-    .LeftSection {
+    .RightSection {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+     .LeftSection {
         width: 100%;
     }
 }
 
+
 @media (max-width:650px) {
-    .container{
+    .containerBox {
+  margin-top: clamp(4rem, 15vw, 20rem);
+}
+    .container {
         gap: 1rem;
     }
+
     .Section {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -71,7 +84,8 @@ h2 {
     .RightSection {
         width: 100%;
     }
-    .content{
+
+    .content {
         text-align: center;
     }
 }

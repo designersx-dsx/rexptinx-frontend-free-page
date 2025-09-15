@@ -71,8 +71,7 @@
 
 .boxBor {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* padding: 40px; */
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .box {
@@ -110,4 +109,67 @@
     font-size: 18px;
     color: #555;
     line-height: 1.5;
+}
+
+@media(max-width:768px) {
+    .joinBtn img {
+        width: 90%;
+    }
+
+}
+
+@media(max-width:700px) {
+    .containerBox {
+        margin-top: 5rem;
+    }
+
+    .KeyDiv {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+
+    }
+
+    .LeftSection {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .subtitle {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .description p {
+        font-size: 15px;
+    }
+
+    .RightSection {
+        width: 100%;
+    }
+
+    .boxBor {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 2rem;
+    }
+
+    .box:nth-child(3) {
+        background: #f8f6ff;
+    }
+
+    .box:nth-child(4) {
+        background: unset;
+    }
+
+    .JoinBtnMob {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+    }
 }
