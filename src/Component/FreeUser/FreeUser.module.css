@@ -117,7 +117,7 @@
 .CTATextSection p {
   font-size: var(--p-size);
   margin-bottom: 1rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .CTATextSection li {

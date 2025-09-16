@@ -1,5 +1,5 @@
 .containerBox {
-    margin-top: 15rem;
+    margin-top: 10rem;
     padding-inline: 20px;
 }
 
@@ -27,7 +27,7 @@
     font-size: clamp(40px, 5.5vw, 100px);
     font-weight: bold;
     color: transparent;
-    -webkit-text-stroke: 2px #8a2be2;
+    -webkit-text-stroke: 1px #8a2be2;
 
 }
 
@@ -45,7 +45,7 @@
     font-size: var(--subtitle-size);
     line-height: var(--subtitle-line-height);
     color: var(--subtitle-color);
-    font-weight: 600;
+    font-weight: 800;
     margin-inline: auto;
 }
 
@@ -75,7 +75,7 @@
 
 .LeftSection:hover {
     transform: scale(1.02);
-    border: 1px solid #5E4491;
+    border: 1px solid #b49bff;
 }
 
 /* shine effect */
@@ -287,7 +287,7 @@
 
 .Multiligual:hover {
     transform: scale(1.02);
-    border: 1px solid #e0ff8a;
+    border: 1px solid #99c994;
 }
 
 .Multiligual::before {
@@ -319,7 +319,7 @@
 
 .content3 h3 {
     font-size: 30px;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 
 }
 

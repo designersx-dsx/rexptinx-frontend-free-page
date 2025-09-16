@@ -28,7 +28,7 @@
     font-size: clamp(40px, 5.5vw, 100px);
     font-weight: bold;
     color: transparent;
-    -webkit-text-stroke: 2px #8a2be2;
+    -webkit-text-stroke: 1px #8a2be2;
 
 }
 
@@ -46,7 +46,7 @@
     font-size: var(--subtitle-size);
     line-height: var(--subtitle-line-height);
     color: var(--subtitle-color);
-    font-weight: 600;
+    font-weight: 800;
     margin-inline: auto;
     width: 60%;
 }
@@ -151,7 +151,7 @@
 
 .question {
     font-weight: 600;
-    font-size: 22px;
+    font-size: 18px;
     color: #000;
 }
 
@@ -195,7 +195,7 @@
 }
 
 .content {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     color: #ffff;
 }

@@ -6,7 +6,7 @@ const FAQ = () => {
         {
             question: "Is it really free? What's the catch?",
             answer:
-                "We understand that starting something new can bring questions. Here are some of the most common inquiries about our free AI receptionist. It’s simple, straightforward, and designed to help you without any hidden tricks or catches."
+                "We understand that starting something new can bring questions. Here are some of the most common inquiries about our free AI receptionist."
         },
         {
             question: "How long does it take to set up?",

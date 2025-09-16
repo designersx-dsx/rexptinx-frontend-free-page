@@ -7,7 +7,8 @@
     width: 100%;
     max-width: 1400px;
     margin-inline: auto;
-    background-color: #6524EB;
+    /* background-color: #6524EB; */
+    background-image: linear-gradient(to right, #6524EB , #391485);
     display: flex;
     align-items: center;
     justify-content: space-between;
