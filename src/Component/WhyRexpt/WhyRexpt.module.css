@@ -375,6 +375,10 @@
         margin-top: 5rem;
     }
 
+    .topSection {
+        width: 90%;
+    }
+
     .LeftSection,
     .SecureReliable,
     .Multiligual,
@@ -458,5 +462,11 @@
 
     .costEffective p {
         font-size: 14px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+        line-height: 1.2;
+        text-align: center;
     }
 }

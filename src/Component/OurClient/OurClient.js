@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Slider from "react-slick";
 import styles from '../OurClient/OurClient.module.css'
 import "slick-carousel/slick/slick.css";
@@ -6,17 +6,46 @@ import "slick-carousel/slick/slick-theme.css";
 
 const OurClient = () => {
     const sliderRef = useRef(null);
+    const [slidesToShow, setSlidesToShow] = useState(2);
+
+    useEffect(() => {
+        // 👇 Safe for Next.js (window check)
+        const updateSlides = () => {
+            if (window.innerWidth <= 500) {
+                setSlidesToShow(1);
+            } else if (window.innerWidth <= 650) {
+                setSlidesToShow(2);
+            } else if (window.innerWidth < 1200) {
+                setSlidesToShow(1);
+            } else {
+                setSlidesToShow(2);
+            }
+        };
+
+        updateSlides(); // run on load
+        window.addEventListener("resize", updateSlides);
+        return () => window.removeEventListener("resize", updateSlides);
+    }, []);
+
     const settings = {
         infinite: true,
         autoplay: true,
         autoplaySpeed: 3000,
-        slidesToShow: 2,
+        slidesToShow: slidesToShow,
         slidesToScroll: 1,
         arrows: false,
         dots: false,
         responsive: [
             {
                 breakpoint: 1200,
+                settings: { slidesToShow: 1 },
+            },
+            {
+                breakpoint: 650,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 500,
                 settings: { slidesToShow: 1 },
             },
         ],

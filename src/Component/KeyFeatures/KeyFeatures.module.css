@@ -110,7 +110,9 @@
     color: #555;
     line-height: 1.5;
 }
-
+.JoinBtnMob{
+    display: none;
+}
 @media(max-width:768px) {
     .joinBtn img {
         width: 90%;
