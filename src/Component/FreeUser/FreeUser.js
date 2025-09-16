@@ -47,15 +47,15 @@ const FreeUser = () => {
                 </div>
               </div>
 
-
               <div className={styles.CTAVideo}>
                 <div className={styles.VideoBox}>
                   {!playVideo ? (
-                    <div className={styles.thumbnail} onClick={() => setPlayVideo(true)}>
+                    <div
+                      className={styles.thumbnail}
+                      onClick={() => setPlayVideo(true)}
+                    >
                       <img src="/Images/CTA-Video.png" alt="ViewDemo" />
-                      <div className={styles.playButton}>
-                        ▶
-                      </div>
+                      <div className={styles.playButton}>▶</div>
                     </div>
                   ) : (
                     <iframe
@@ -70,9 +70,6 @@ const FreeUser = () => {
                   )}
                 </div>
               </div>
-
-
-
             </div>
           </div>
 

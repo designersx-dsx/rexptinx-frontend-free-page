@@ -88,6 +88,8 @@
   width: 65%;
   line-height: clamp(40px, 6vw, 85px);
   color: #24252C;
+  backdrop-filter: blur(4px); 
+  border-radius: 20px;
 }
 
 .INText {
