@@ -1,6 +1,6 @@
 .containerBox {
     padding-inline: 20px;
-    margin-top: 15rem;
+    margin-top: 20rem;
 }
 
 .container {
@@ -19,10 +19,12 @@
 }
 
 .Section {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
-    justify-content: space-between;
+    justify-items: center;
     gap: 2rem;
+
 }
 
 .sectinIcon {
@@ -35,13 +37,55 @@
 
 .RightSection {
     width: 50%;
-  
+
 }
-.content{
+
+.content {
     padding-left: 2rem;
 }
+
 .content h1,
 h2 {
     font-size: clamp(20px, 2.5vw, 45px);
-    font-weight: 600;
+    font-weight: 800;
+}
+
+@media(max-width:1200px) {
+   
+    .container {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .RightSection {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+     .LeftSection {
+        width: 100%;
+    }
+}
+
+
+@media (max-width:650px) {
+    .containerBox {
+  margin-top: clamp(4rem, 15vw, 20rem);
+}
+    .container {
+        gap: 1rem;
+    }
+
+    .Section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .RightSection {
+        width: 100%;
+    }
+
+    .content {
+        text-align: center;
+    }
 }

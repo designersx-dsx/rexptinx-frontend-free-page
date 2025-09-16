@@ -8,6 +8,7 @@ import OurClient from '../../Component/OurClient/OurClient'
 import GetInTouch from '../../Component/GetInTouch/GetInTouch'
 // import SliderSection from '../../Component/SliderSection/SliderSection'
 import FAQ from '../../Component/FAQ/FAQ'
+import Footer from '../../Component/Footer/Footer'
 const LandingPage = () => {
   return (
     <div>
@@ -20,6 +21,8 @@ const LandingPage = () => {
       <GetInTouch/>
       <FAQ/>
       {/* <SliderSection/> */}
+
+      <Footer/>
     </div>
   )
 }

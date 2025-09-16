@@ -59,6 +59,10 @@ const HowItWorks = () => {
                   Forward your <b>business calls</b> to your new Rexpt number and let
                   your <b>AI receptionist</b> handle the rest.
                 </p>
+                <div className={styles.cerateBtn}>
+                  <img src='Svg/btn-shape.svg' alt='btn-shape' />
+                  <p>Create my FREE account</p>
+                </div>
               </div>
             </div>
           </div>

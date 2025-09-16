@@ -59,6 +59,9 @@ const KeyFeatures = () => {
                             </div>
                         ))}
                     </div>
+                    <div className={styles.JoinBtnMob}>
+                        <img src='Svg/join-rexpt-mob.svg' alt='join-rexpt-mob' />
+                    </div>
                 </div>
             </div>
         </div>
