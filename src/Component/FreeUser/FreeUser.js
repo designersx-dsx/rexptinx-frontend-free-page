@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import styles from "../FreeUser/FreeUser.module.css";
 import FreeUserMobile from "./FreeUserMobile";
+import Modal from "../Modal/Modal";
 
-const FreeUser = () => {
-  const [playVideo, setPlayVideo] = useState(false);
+const FreeUser = ({ scrollToHowItWorks }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
       <div className={styles.ForDeskTop}>
@@ -42,34 +43,51 @@ const FreeUser = () => {
                   </li>
                 </ul>
 
-                <div className={styles.joinBtn}>
+                <div className={styles.joinBtn} onClick={scrollToHowItWorks}>
                   <img src="Svg/join-rexpt.svg" alt="join-rexpt" />
                 </div>
               </div>
 
+
+
               <div className={styles.CTAVideo}>
                 <div className={styles.VideoBox}>
-                  {!playVideo ? (
-                    <div
-                      className={styles.thumbnail}
-                      onClick={() => setPlayVideo(true)}
-                    >
-                      <img src="/Images/CTA-Video.png" alt="ViewDemo" />
-                      <div className={styles.playButton}>▶</div>
-                    </div>
-                  ) : (
+                  <div
+                    className={styles.thumbnail}
+                    onClick={() => setIsModalOpen(true)}
+                  >
+                    <img src="/Images/CTA-Video.png" alt="ViewDemo" />
+                    <div className={styles.playButton}>▶</div>
+                  </div>
+                </div>
+
+                {/* Modal for Video */}
+                <Modal
+                  isOpen={isModalOpen}
+                  onClose={() => setIsModalOpen(false)}
+                  bgColor="transparent"
+                  boxShadow="unset"
+                  closeColor="#fff"
+                  maxWidth="900px"
+                >
+                  <div className={styles.videoWrapper}>
                     <iframe
+                      className={styles.videoFrame}
                       width="100%"
-                      height="315"
+                      height="500"
                       src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
                       title="YouTube video player"
                       frameBorder="0"
                       allow="autoplay; encrypted-media"
                       allowFullScreen
                     ></iframe>
-                  )}
-                </div>
+                  </div>
+                </Modal>
               </div>
+
+
+
+
             </div>
           </div>
 

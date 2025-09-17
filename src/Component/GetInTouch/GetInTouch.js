@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../GetInTouch/GetInTouch.module.css'
 
-const GetInTouch = () => {
+const GetInTouch = ({ scrollToHowItWorks }) => {
     return (
         <div className={styles.containerBox}>
             <div className={styles.container}>
@@ -10,7 +10,7 @@ const GetInTouch = () => {
                         <h1 className={styles.subTitle}>Let's Get In Touch.</h1>
                         <p className={styles.description}>Ready to stop missing calls and start growing your business?</p>
 
-                        <div className={styles.joinImg}>
+                        <div className={styles.joinImg} onClick={scrollToHowItWorks}>
                             <img src='Svg/join-rexpt-white.svg' alt='join-rexpt-white.svg' />
                         </div>
 

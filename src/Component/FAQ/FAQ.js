@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../FAQ/FAQ.module.css'
 
-const FAQ = () => {
+const FAQ = ({ scrollToHowItWorks }) => {
     const faqs = [
         {
             question: "Is it really free? What's the catch?",
@@ -99,7 +99,7 @@ const FAQ = () => {
 
                         {/* Right section (Join box) */}
                         <div className={styles.right}>
-                            <div className={styles.joinBox}>
+                            <div className={styles.joinBox} onClick={scrollToHowItWorks}>
                                 <img src='Svg/join-rexpt.svg' alt='join-rexpt' />
                             </div>
                         </div>

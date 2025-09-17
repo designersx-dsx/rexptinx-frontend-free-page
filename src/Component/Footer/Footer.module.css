@@ -1,13 +1,18 @@
-.footer {
+.container {
     width: 100%;
     max-width: 1400px;
     margin-inline: auto;
+}
+
+.footer {
+
+    padding-block: 5rem;
+    padding-inline: 20px;
     margin-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-top: 2px solid #D4D4D4;
-    padding: 50px 0px;
     background: #fff;
 }
 

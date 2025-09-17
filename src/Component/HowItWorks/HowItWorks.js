@@ -1,9 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styles from '../HowItWorks/HowItWorks.module.css'
+import Modal from '../Modal/Modal'
+import FreeAccount from '../FreeAccount/FreeAccount'
 
 const HowItWorks = () => {
+     const [isModalOpen, setIsModalOpen] = useState(false)
   return (
-    <div className={styles.containerBox}>
+    <>    <div className={styles.containerBox}>
       <div className={styles.container}>
         <div className={styles.TopBar}>
           <div className={styles.Title}>
@@ -59,7 +62,7 @@ const HowItWorks = () => {
                   Forward your <b>business calls</b> to your new Rexpt number and let
                   your <b>AI receptionist</b> handle the rest.
                 </p>
-                <div className={styles.cerateBtn}>
+                <div className={styles.cerateBtn} onClick={() => setIsModalOpen(true)}>
                   <img src='Svg/btn-shape.svg' alt='btn-shape' />
                   <p>Create my FREE account</p>
                 </div>
@@ -95,7 +98,7 @@ const HowItWorks = () => {
 
 
                 {/* Button */}
-                <div className={styles.btn}>
+                <div className={styles.btn} >
                   <img src="Svg/btn-shape.svg" alt="btn-shape" />
                   <p>
                     Create my <b>FREE</b> account
@@ -129,6 +132,17 @@ const HowItWorks = () => {
 
       </div>
     </div>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        bgColor="transparent"
+        boxShadow="unset" closeColor="#fff"
+
+        maxWidth="500px"
+      >
+        <FreeAccount />
+      </Modal>
+    </>
 
   )
 }

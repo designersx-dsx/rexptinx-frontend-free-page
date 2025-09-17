@@ -45,24 +45,76 @@
     color: var(--subtitle-color);
     font-weight: 800;
     margin-inline: auto;
+    z-index: 111;
+    position: relative;
 }
 
 .description p {
     font-size: var(--p2-size);
     margin-top: 1rem;
+    z-index: 111;
+    position: relative;
 }
 
 .KeyDiv {
     width: 100%;
     position: absolute;
     top: 24%;
-    z-index: -1;
+    z-index: 1;
 }
 
 .joinBtn {
     text-align: center;
 }
 
+.joinBtn {
+  width: 100%;
+  cursor: pointer;
+  position: relative;     
+  display: inline-block;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.joinBtn img {
+ 
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.joinBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  transform: skewX(-25deg);
+}
+
+/* Hover state */
+.joinBtn:hover {
+  transform: scale(1.02); 
+}
+
+.joinBtn:hover::before {
+  animation: shine 0.8s forwards;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
 
 .RightSection {
     /* border: 1px solid; */
