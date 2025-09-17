@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../KeyFeatures/KeyFeatures.module.css'
 
-const KeyFeatures = () => {
+const KeyFeatures = ({ scrollToHowItWorks }) => {
     const features = [
         {
             icon: "Svg/call-icon.svg",
@@ -42,7 +42,7 @@ const KeyFeatures = () => {
 
                     <div className={styles.KeyDiv}>
                         <img src='Svg/keyImg.svg' alt='key-icon' />
-                        <div className={styles.joinBtn}>
+                        <div className={styles.joinBtn} onClick={scrollToHowItWorks}>
                             <img src="Svg/join-rexpt.svg" alt="join-rexpt" />
                         </div>
                     </div>
@@ -59,7 +59,7 @@ const KeyFeatures = () => {
                             </div>
                         ))}
                     </div>
-                    <div className={styles.JoinBtnMob}>
+                    <div className={styles.JoinBtnMob} onClick={scrollToHowItWorks}>
                         <img src='Svg/join-rexpt-mob.svg' alt='join-rexpt-mob' />
                     </div>
                 </div>

@@ -88,7 +88,7 @@
   width: 65%;
   line-height: clamp(40px, 6vw, 85px);
   color: #24252C;
-  backdrop-filter: blur(4px); 
+  backdrop-filter: blur(4px);
   border-radius: 20px;
 }
 
@@ -131,17 +131,57 @@
   padding-left: 1.2rem
 }
 
-.joinBtn {
-  margin-top: 4rem;
-  cursor: pointer;
-}
+
 
 .joinBtn {
   width: 100%;
+  margin-top: 4rem;
+  cursor: pointer;
+  position: relative;      /* shine ke liye */
+  display: inline-block;
+  overflow: hidden;
+  transition: transform 0.4s ease;
 }
 
 .joinBtn img {
-  width: 90%;
+  width: 80%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Shine effect ke liye pseudo element */
+.joinBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  transform: skewX(-25deg);
+}
+
+/* Hover state */
+.joinBtn:hover {
+  transform: scale(1.02); /* halka zoom */
+}
+
+.joinBtn:hover::before {
+  animation: shine 0.8s forwards;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
 }
 
 .CTAVideo {
@@ -155,7 +195,14 @@
   position: relative;
   width: 100%;
 }
-
+.videoFrame {
+  width: 98%;
+  height: 500px;
+  border-radius:20px;   
+  overflow: hidden;      
+  border: 4px solid #fff;    
+  margin-right: 5px;    
+}
 .thumbnail {
   position: relative;
   cursor: pointer;

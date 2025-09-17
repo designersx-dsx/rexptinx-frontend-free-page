@@ -48,6 +48,7 @@
 
 .joinImg {
     margin-top: 3rem;
+    cursor: pointer;
 }
 
 .RightSection {
@@ -179,8 +180,8 @@
     }
 
     .LeftSection {
-        width: 100%;
-        padding-inline: 2rem;
+        width: 90%;
+        padding-inline: 10px;
 
     }
 
