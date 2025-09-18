@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styles from '../Modal/Modal.module.css'
 
-const Modal = ({ isOpen, onClose, children, bgColor = "#fff", boxShadow = "0px 5px 25px rgba(0, 0, 0, 0.3)", closeColor = "#000", maxWidth = "400px", }) => {
+const Modal = ({ isOpen, onClose, children, bgColor = "#fff", boxShadow = "0px 5px 25px rgba(0, 0, 0, 0.3)", closeColor = "#000", maxWidth = "400px",height = "auto", }) => {
   // background scroll control
   useEffect(() => {
     if (isOpen) {
@@ -22,7 +22,7 @@ const Modal = ({ isOpen, onClose, children, bgColor = "#fff", boxShadow = "0px 5
       <div
         className={styles.modalContent}
         onClick={(e) => e.stopPropagation()}
-        style={{ backgroundColor: bgColor, boxShadow, maxWidth: maxWidth, }}
+        style={{ backgroundColor: bgColor, boxShadow, maxWidth: maxWidth, height,}}
       >
         <button className={styles.closeBtn} onClick={onClose} style={{ color: closeColor }}>
           ✕
