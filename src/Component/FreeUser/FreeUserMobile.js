@@ -36,7 +36,7 @@ const FreeUserMobile = () => {
                 onClose={() => setIsModalOpen(false)}
                 bgColor="transparent"
                 boxShadow="unset" closeColor="#fff"
-
+                // height="95dvh"
                 maxWidth="500px"
             >
                 <FreeAccount />

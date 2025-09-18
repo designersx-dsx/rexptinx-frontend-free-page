@@ -3,8 +3,24 @@ import styles from "../FreeUser/FreeUser.module.css";
 import FreeUserMobile from "./FreeUserMobile";
 import Modal from "../Modal/Modal";
 
+
+const languages = [
+  { code: "en", name: "English", flag: "https://flagcdn.com/us.svg" },
+  { code: "fr", name: "French", flag: "https://flagcdn.com/fr.svg" },
+  { code: "de", name: "German", flag: "https://flagcdn.com/de.svg" },
+  { code: "in", name: "Hindi", flag: "https://flagcdn.com/in.svg" },
+];
 const FreeUser = ({ scrollToHowItWorks }) => {
+
+
   const [isModalOpen, setIsModalOpen] = useState(false);
+ const [selected, setSelected] = useState(languages[0]);
+  const [open, setOpen] = useState(false);
+
+  const handleSelect = (lang) => {
+    setSelected(lang);
+    setOpen(false);
+  };
   return (
     <>
       <div className={styles.ForDeskTop}>
@@ -75,7 +91,7 @@ const FreeUser = ({ scrollToHowItWorks }) => {
                       className={styles.videoFrame}
                       width="100%"
                       height="500"
-                      src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                      src="https://www.youtube.com/embed/qPuwdJjkBms?autoplay=1"
                       title="YouTube video player"
                       frameBorder="0"
                       allow="autoplay; encrypted-media"
@@ -104,6 +120,31 @@ const FreeUser = ({ scrollToHowItWorks }) => {
               <h3 className={styles.mainText}>CALL ME</h3>
             </div>
           </div>
+        </div>
+        <div className={styles.languageDiv}>
+        <div className={`${styles.dropdown} ${open ? styles.open : ""}`}>
+      <button
+        className={styles.dropdownToggle}
+        onClick={() => setOpen(!open)}
+      >
+        <img src={selected.flag} alt={selected.name} />
+        <span>{selected.name}</span>
+        <span className={styles.arrow}>▼</span>
+      </button>
+
+      <ul className={styles.dropdownMenu}>
+        {languages.map((lang) => (
+          <li
+            key={lang.code}
+            onClick={() => handleSelect(lang)}
+            className={styles.dropdownItem}
+          >
+            <img src={lang.flag} alt={lang.name} />
+            <span>{lang.name}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
         </div>
       </div>
       <div className={styles.ForMobileView}>
