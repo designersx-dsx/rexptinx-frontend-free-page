@@ -100,20 +100,22 @@
 
 /* Hover state */
 .joinBtn:hover {
-  transform: scale(1.02); 
+  transform: scale(1.03); 
 }
 
 .joinBtn:hover::before {
   animation: shine 0.8s forwards;
 }
 
+/* Shine animation */
 @keyframes shine {
-  0% {
-    left: -75%;
-  }
-  100% {
-    left: 125%;
-  }
+    0% {
+        left: -45%;
+    }
+
+    100% {
+        left: 125%;
+    }
 }
 
 .RightSection {
