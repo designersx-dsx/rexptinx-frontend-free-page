@@ -1,10 +1,11 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import styles from '../HowItWorks/HowItWorks.module.css'
 import Modal from '../Modal/Modal'
 import FreeAccount from '../FreeAccount/FreeAccount'
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const HowItWorks = () => {
-     const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
   return (
     <>    <div className={styles.containerBox}>
       <div className={styles.container}>
@@ -130,7 +131,19 @@ const HowItWorks = () => {
 
         </div>
 
+        <div className={styles.arrow} >
+          <DotLottieReact
+      src="https://lottie.host/873ef697-740b-42b9-afe8-461f833d05ca/pLzxIgFHR0.lottie"
+      loop
+      autoplay
+    />
+          {/* <img src="Svg/arrow.gif" alt="arrowGif" /> */}
+          
+          
+        </div>
+
       </div>
+
     </div>
       <Modal
         isOpen={isModalOpen}

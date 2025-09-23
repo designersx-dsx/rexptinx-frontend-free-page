@@ -7,6 +7,7 @@
   width: 100%;
   max-width: 1400px;
   margin-inline: auto;
+  position: relative;
 }
 
 .TopBar {
@@ -363,6 +364,9 @@
   }
 }
 
+
+
+
 @media (max-width:1200px) {
   .timelineContainer {
     width: 60%;
@@ -474,4 +478,13 @@
     margin-bottom: 0px;
     padding-bottom: 0px;
   }
+  .arrow {
+  display: none;
+}
+}
+.arrow {
+  position: absolute;
+  right: -12%;
+  bottom: 5%;
+  width: 12%;
 }

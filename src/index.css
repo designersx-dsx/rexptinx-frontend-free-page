@@ -62,3 +62,37 @@ li {
   --p-color: #24252c;
   --p-color2: #ffffff;
 }
+
+.floatingButton {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  z-index: 999;
+  animation: slideUp 0.4s ease-out forwards;
+}
+
+.floatingButton button {
+  padding: 12px 20px;
+  border-radius: 25px;
+  background: #6524EB;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.floatingButton img {
+  width: 100%;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateX(-50%) translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
