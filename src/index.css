@@ -1,6 +1,6 @@
 
 
-/* @font-face {
+@font-face {
   font-family: 'Arboria Light';
   src: url('/public/Fonts/fonnts.com-Arboria_Light.otf') format('opentype');
   font-weight: 300;
@@ -54,10 +54,23 @@
   src: url('/public/Fonts/fonnts.com-Arbotek_Ultra.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
-} */
+}
+
+@font-face {
+  font-family: 'Arbotek black';
+  src: url('/public/Fonts/fonnts.com-Arboria_Black.otf') format('opentype');
+  font-weight: bolder;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Arbotek bold';
+  src: url('/public/Fonts/fonnts.com-Arboria_Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
 
 body {
-  /* font-family: 'Arboria Medium', sans-serif; */
+  font-family: 'Arboria Medium';
   margin: 0;
 }
 
@@ -67,10 +80,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato", sans-serif;
-  /* font-family: 'Arboria Medium', sans-serif; */
+  
+  font-family: 'Arboria Medium', sans-serif;
   margin: 0px;
   color: #24252C;
+  font-weight: 400;
   
 
 }
@@ -78,8 +92,8 @@ h6 {
 p,
 ul,
 li {
-  font-family: "Inter", sans-serif;
-  /* font-family: 'Arboria Medium', sans-serif; */
+  /* font-family: "Inter", sans-serif; */
+  font-family: 'Arboria Medium', sans-serif;
   margin: 0px;
   color: #24252C;
 }

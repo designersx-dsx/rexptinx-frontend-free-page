@@ -23,13 +23,14 @@
   font-size: clamp(40px, 13vw, 225px);
   font-weight: bold;
   color: transparent;
-  -webkit-text-stroke: 1px #8a2be2;
+  -webkit-text-stroke: 1.2px #8a2be2;
+  font-family: 'Arbotek black' !important;
 
 }
 
 .Strip {
   position: absolute;
-  bottom: 15%;
+  bottom: 13%;
   height: 80px;
   background-image: linear-gradient(#ffffff15, #ffffff);
   z-index: 11;
@@ -139,7 +140,8 @@
 .content h3 {
   margin: 0;
   font-size: clamp(24px, 2.5vw, 40px);
-  font-weight: 600;
+  font-family: 'Arboria Medium';
+
 }
 
 .content p {
@@ -175,7 +177,7 @@
 /* Inside card */
 .card {
   position: relative;
-    z-index: 1;
+  z-index: 1;
 }
 
 /* Logo */
@@ -222,6 +224,7 @@
   color: #A3B6DE;
 
 }
+
 .btn {
   position: relative;
   display: inline-flex;
@@ -229,7 +232,8 @@
   align-items: center;
   width: 100%;
   cursor: pointer;
-  overflow: hidden; /* shine bahar na nikle */
+  overflow: hidden;
+  /* shine bahar na nikle */
   transition: transform 0.4s ease;
 }
 
@@ -251,7 +255,8 @@
   font-weight: 500;
   margin: 0;
   white-space: nowrap;
-  pointer-events: none; /* text hover se block na ho */
+  pointer-events: none;
+  /* text hover se block na ho */
 }
 
 /* Shine effect pseudo element */
@@ -262,18 +267,17 @@
   left: -75%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0.6) 50%,
-    rgba(255, 255, 255, 0.2) 100%
-  );
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0.2) 100%);
   transform: skewX(-25deg);
 }
 
 /* Hover effects */
 .btn:hover {
-  transform: scale(1.02); /* halka zoom */
+  transform: scale(1.02);
+  /* halka zoom */
 }
 
 
@@ -287,6 +291,7 @@
   0% {
     left: -75%;
   }
+
   100% {
     left: 125%;
   }
@@ -478,10 +483,12 @@
     margin-bottom: 0px;
     padding-bottom: 0px;
   }
+
   .arrow {
-  display: none;
+    display: none;
+  }
 }
-}
+
 .arrow {
   position: absolute;
   right: -12%;

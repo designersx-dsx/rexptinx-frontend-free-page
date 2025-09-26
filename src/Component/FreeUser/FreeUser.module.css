@@ -7,7 +7,7 @@
 .languageDiv {
   position: absolute;
   top: 5%;
-  right: 5%;
+  right: 5%;  
 }
 
 .dropdown {
@@ -32,6 +32,7 @@
   justify-content: space-between;
   color: #24252c;
   transition: background 0.3s ease, color 0.3s ease;
+  font-family: 'Arboria Medium';
 }
 
 .dropdownToggle:hover {
@@ -187,16 +188,18 @@
   text-decoration: underline;
   font-weight: 800;
   color: #6524EB;
+   font-family: 'Arbotek black';
 }
 
 .TextFreeUserSection h2 {
-  font-size: clamp(32px, 8vw, 135px);
+  font-size: clamp(32px, 8vw, 120px);
   font-weight: 300;
   width: 65%;
   line-height: clamp(40px, 6vw, 85px);
   color: #24252C;
   backdrop-filter: blur(4px);
   border-radius: 20px;
+  font-family: 'Arbotek Light';
 }
 
 .INText {
@@ -205,7 +208,7 @@
 }
 
 .INText b {
-  font-weight: 800;
+  font-family: 'Arbotek black';
 }
 
 .CTASection {
@@ -436,7 +439,7 @@
 
 .mainText {
   font-size: 28px;
-  font-weight: 700;
+  font-family: 'Arbotek black';
   color: #ffff;
 }
 
