@@ -21,7 +21,7 @@ const KeyFeatures = ({ scrollToHowItWorks }) => {
         {
             icon: "Svg/appointment.svg",
             title: "Call History & Summaries",
-            desc: "Get detailed call summaries sent to you."
+            desc: "Get Call Summery with Intent & Sentimental Analysis in our built-in Mini CRM"
         }
     ];
     return (
@@ -37,7 +37,7 @@ const KeyFeatures = ({ scrollToHowItWorks }) => {
                         <h3 className={styles.subtitle}>What you <span className='spanText '>get for FREE </span></h3>
                     </div>
                     <div className={styles.description}>
-                        <p>Discover the top features of Rexpt's AI receptionist.</p>
+                        <p>Discover the TOP Features of Rexpt - AI Receptionist Service with FREE Signup.</p>
                     </div>
 
                     <div className={styles.KeyDiv}>

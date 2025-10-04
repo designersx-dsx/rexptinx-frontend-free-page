@@ -50,13 +50,13 @@ const FreeUser = ({ scrollToHowItWorks }) => {
                 <p> Join & Transform Your Business</p>
                 <ul>
                   <li>
-                    Answer calls <b>24/7</b>- Even when you’re away
+                    Boost Profit by 100% with "0" <b>Missed Calls</b>
                   </li>
                   <li>
-                    Schedule appointments <b>automatically</b>
+                    Improve Efficiency with Automated <b>Appointment Booking</b>
                   </li>
                   <li>
-                    <b>Nurture leads</b> and boost sales
+                    SAVE <b>upto 87%</b> compared to Traditional System
                   </li>
                 </ul>
 
