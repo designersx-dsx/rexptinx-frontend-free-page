@@ -133,14 +133,14 @@ const FreeUserMobileNew = () => {
 
         </div>
 
-        {/* <div className={styles.JoinPoints}>
+        <div className={styles.JoinPoints}>
           <div className={styles.JoinBox}>
             <p> Join the Revolution &amp; Transform</p>
             <ul><li>Boost Profit by up to 100% with "0" <b>Missed Calls</b></li><li>Manage <b>Appointment Booking</b> for Better Efficiency</li><li>SAVE <b>up to 87%</b> compared to Traditional System</li></ul>
 
           </div>
 
-        </div> */}
+        </div>
 
       </div>
       <div className={styles.languageDiv}>
