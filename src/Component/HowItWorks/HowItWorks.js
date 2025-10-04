@@ -16,7 +16,7 @@ const HowItWorks = () => {
           </div>
 
           <div className={styles.SubtitleDiv}>
-            <h3 className={styles.subtitle}>A simple, <span className='spanText '>three-step process</span> to help you get started.</h3>
+            <h3 className={styles.subtitle}>A simple, <span className='spanText '>3 Point</span> to help you get started.</h3>
           </div>
         </div>
 
@@ -47,7 +47,7 @@ const HowItWorks = () => {
                 <h3>Customize</h3>
                 <p>
                   Use our simple interface to{" "}
-                  <b>customize your agent’s voice</b> and call script in minutes.
+                  <b>customize your agent’s voice</b> and Persona in minutes.
                 </p>
               </div>
             </div>
@@ -133,13 +133,13 @@ const HowItWorks = () => {
 
         <div className={styles.arrow} >
           <DotLottieReact
-      src="https://lottie.host/873ef697-740b-42b9-afe8-461f833d05ca/pLzxIgFHR0.lottie"
-      loop
-      autoplay
-    />
+            src="https://lottie.host/873ef697-740b-42b9-afe8-461f833d05ca/pLzxIgFHR0.lottie"
+            loop
+            autoplay
+          />
           {/* <img src="Svg/arrow.gif" alt="arrowGif" /> */}
-          
-          
+
+
         </div>
 
       </div>
