@@ -384,7 +384,11 @@
 }
 
 
-
+@media (max-width:1600px) {
+  .arrow {
+    display: none;
+  }
+}
 
 @media (max-width:1200px) {
   .timelineContainer {
@@ -405,9 +409,7 @@
   .PhoneContainer {
     display: none;
   }
-  .arrow{
-    display: none;
-  }
+
 }
 
 @media (max-width:650px) {

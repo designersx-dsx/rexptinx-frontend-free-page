@@ -162,6 +162,126 @@
 
 }
 
+/* Langauge  CSS  start*/
+
+.languageDiv {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: sans-serif;
+  width: 180px;
+}
+
+.dropdownToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 26px;
+  width: 100%;
+  justify-content: space-between;
+  color: #24252c;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-family: 'Arboria Medium';
+}
+
+.dropdownToggle:hover {
+  background: #ece6ff;
+  color: #6524eb;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-top: 4px;
+  border-radius: 8px;
+  list-style: none;
+  padding: 6px 0;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+
+  /* Animation setup */
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Dropdown active state */
+.dropdown.open .dropdownMenu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdownToggle img,
+.dropdownItem img {
+  width: 33px;
+  height: 33px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.arrow {
+  margin-left: auto;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* Arrow rotate effect */
+.dropdown.open .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdownItem:hover {
+  background: #eae1fd;
+  color: #6524eb;
+}
+
+.dropdownItem img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+
+.JoinBox {
+  background-color: #fff;
+  border-radius: 45px;
+  display: flex;
+  color: #24252c;
+  width: 95%;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+/* Langauge  CSS  End*/
+
 @media (max-width:650px) {
   .TextFreeUserSection h1 {
     font-size: 48px;

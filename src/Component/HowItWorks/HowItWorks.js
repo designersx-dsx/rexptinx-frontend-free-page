@@ -16,7 +16,7 @@ const HowItWorks = () => {
           </div>
 
           <div className={styles.SubtitleDiv}>
-            <h3 className={styles.subtitle}>A simple, <span className='spanText '>3 Point</span> to help you get started.</h3>
+            <h3 className={styles.subtitle}>A simple, <span className='spanText '>3 Point process</span> to help you get started.</h3>
           </div>
         </div>
 
@@ -108,7 +108,7 @@ const HowItWorks = () => {
 
                 {/* Login link */}
                 <p className={styles.login}>
-                  Already have an account? <a href="#">Log In</a>
+                  {/* Already have an account? <a href="#">Log In</a> */}
                 </p>
 
                 {/* Footer */}
