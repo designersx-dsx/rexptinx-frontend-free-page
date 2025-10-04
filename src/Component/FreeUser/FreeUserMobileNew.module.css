@@ -161,12 +161,13 @@
   width: 70%;
 
 }
+
 /* Langauge  CSS  start*/
 
 .languageDiv {
   position: absolute;
   top: 2%;
-  right: 3%;  
+  right: 3%;
 }
 
 .dropdown {
@@ -264,6 +265,19 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
+}
+
+
+.JoinBox {
+  background-color: #fff;
+  border-radius: 45px;
+  display: flex;
+  color: #24252c;
+  width: 95%;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
 }
 
 /* Langauge  CSS  End*/

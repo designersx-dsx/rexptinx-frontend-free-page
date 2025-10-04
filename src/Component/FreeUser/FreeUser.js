@@ -47,16 +47,16 @@ const FreeUser = ({ scrollToHowItWorks }) => {
             </div>
             <div className={styles.CTASection}>
               <div className={styles.CTATextSection}>
-                <p> Join & Transform Your Business</p>
+                <p> Join the Revolution & Transform</p>
                 <ul>
                   <li>
-                    Boost Profit by 100% with "0" <b>Missed Calls</b>
+                    Boost Profit by up to 100% with "0" <b>Missed Calls</b>
                   </li>
                   <li>
-                    Improve Efficiency with Automated <b>Appointment Booking</b>
+                    Manage <b>Appointment Booking</b> for Better Efficiency
                   </li>
                   <li>
-                    SAVE <b>upto 87%</b> compared to Traditional System
+                    SAVE <b>up to 87%</b> compared to Traditional System
                   </li>
                 </ul>
 
@@ -74,8 +74,8 @@ const FreeUser = ({ scrollToHowItWorks }) => {
                     className={styles.thumbnail}
                     onClick={() => setIsModalOpen(true)}
                   >
-                    <img src="/Images/CTA-Video.png" alt="ViewDemo" />
-                    <div className={styles.playButton}>▶</div>
+                    <img src="/Svg/WatchDemo.svg" alt="WatchDemo" />
+                    {/* <div className={styles.playButton}>▶</div> */}
                   </div>
                 </div>
 

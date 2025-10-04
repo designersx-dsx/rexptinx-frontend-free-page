@@ -7,7 +7,7 @@
 .languageDiv {
   position: absolute;
   top: 5%;
-  right: 5%;  
+  right: 5%;
 }
 
 .dropdown {
@@ -188,22 +188,22 @@
   text-decoration: underline;
   font-weight: 800;
   color: #6524EB;
-   font-family: 'Arbotek black';
+  font-family: 'Arbotek black';
 }
 
 .TextFreeUserSection h2 {
   font-size: clamp(32px, 8vw, 120px);
   font-weight: 300;
-  width: 65%;
+  width: 60%;
   line-height: clamp(40px, 6vw, 85px);
   color: #24252C;
   backdrop-filter: blur(4px);
   border-radius: 20px;
-  font-family: 'Arbotek Light';
+  font-family: 'Arboria Light';
 }
 
 .INText {
-  font-size: 55px;
+  font-size: 78px;
   font-weight: 300;
 }
 
@@ -223,17 +223,18 @@
 }
 
 .CTATextSection {
-  width: 60%;
+  width: 85%;
 }
 
 .CTATextSection p {
   font-size: var(--p-size);
   margin-bottom: 1rem;
+  font-size: 36px;
   /* font-weight: 600; */
 }
 
 .CTATextSection li {
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 1rem;
 }
 
@@ -241,11 +242,16 @@
   padding-left: 1.2rem
 }
 
+.CTATextSection b {
+  font-family: 'Arbotek bold';
+
+}
+
 
 
 .joinBtn {
   width: 100%;
-  margin-top: 4rem;
+  margin-top: 0rem;
   cursor: pointer;
   position: relative;
   /* shine ke liye */
@@ -255,7 +261,7 @@
 }
 
 .joinBtn img {
-  width: 80%;
+  width: 45%;
   display: block;
   transition: transform 0.4s ease;
 }
@@ -296,10 +302,12 @@
 }
 
 .CTAVideo {
-  width: 50%;
-  border-radius: 20px;
+  width: 15%;
+  border-radius: 5px;
   overflow: hidden;
   position: relative;
+  align-items: center;
+  display: flex;
 }
 
 .VideoBox {
@@ -324,7 +332,7 @@
 .thumbnail img {
   width: 100%;
   display: block;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 .playButton {
