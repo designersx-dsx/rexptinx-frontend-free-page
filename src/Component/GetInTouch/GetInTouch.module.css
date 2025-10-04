@@ -45,6 +45,9 @@
     width: 80%;
     font-size: 26px;
 }
+.description li{
+    color: #fff;
+}
 
 .joinImg {
     margin-top: 3rem;

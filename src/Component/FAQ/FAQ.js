@@ -4,34 +4,34 @@ import styles from '../FAQ/FAQ.module.css'
 const FAQ = ({ scrollToHowItWorks }) => {
     const faqs = [
         {
-            question: "Is it really free? What's the catch?",
+            question: "What exactly is an AI Receptionist?",
             answer:
-                "We understand that starting something new can bring questions. Here are some of the most common inquiries about our free AI receptionist."
+                "An AI Receptionist is a virtual solution that uses Artificial Intelligence (AI) and Natural Language Processing (NLP) to handle your business's calls. It holds human-like conversations, answers FAQs, qualifies leads, schedules appointments, and routes urgent calls—all without human intervention."
         },
         {
-            question: "How long does it take to set up?",
+            question: "How does it handle calls outside of business hours?",
             answer:
-                "Setup usually takes just a few minutes. Our system is designed to be quick and easy, so you can start using it right away without needing any technical expertise or complex installation process at all."
+                "The AI operates 24 hours a day, 7 days a week, 365 days a year. It ensures every call, even at 2:00 AM on a holiday, is answered instantly, a message is taken, or an emergency is routed to an on-call team member, guaranteeing you never miss a lead."
         },
         {
-            question: "Do I need a credit card to sign up?",
+            question: "Can the AI book appointments directly into my calendar?",
             answer:
-                "No, you don’t need a credit card to get started. We believe in making the process easy and accessible to everyone, without requiring financial details upfront or forcing you into commitments you’re not ready for."
+                "Yes. The service integrates seamlessly with popular calendar and scheduling platforms (e.g., Google Calendar, Outlook, industry-specific booking systems). The AI checks your real-time availability and books, reschedules, or cancels appointments during the call."
         },
         {
-            question: "Can I cancel anytime without charges?",
+            question: "How do I train the AI on my business’s services and pricing?",
             answer:
-                "Yes, you can cancel anytime without any hidden fees or penalties. We want you to feel completely free to try the service without pressure, and if it doesn’t fit your needs, you can stop instantly without stress."
+                "The system is trained using your business's existing information. This includes uploading your website content, current FAQs, service menus, pricing sheets, and custom-defined call flow rules. This ensures the AI's responses are 100% accurate and on-brand. We do this by utilizing our customer algorithm in combination with your Google My Business and Website. Our Agents also utilize Google Search to pick positive public information about your business to train itself. And Dont worry, we have Guardrails to make sure it does not cater to any SPAM or Profanity."
         },
         {
-            question: "Are there any hidden fees or extra costs later?",
+            question: "Can it integrate with my existing CRM and business software?",
             answer:
-                "No hidden fees, no extra costs. Everything you need is included right from the start, and we’re transparent about how it works. What you see is what you get, with no surprise charges appearing later on."
+                "Yes, absolutely. The AI is designed to integrate with major CRM platforms (like Salesforce, HubSpot, etc.), Practice Management Software, and Job Management Software via direct integrations or tools like Zapier. This allows it to automatically log call details, lead information, and transcripts in the right place. Our app is also available in prominent apps like Hubspot, Zoho, SquarePOS and many more. We also provide custom integrations if needed."
         },
         {
-            question: "What kind of support is available if I need help?",
+            question: "What happens to the information captured during the call?",
             answer:
-                "Our team is here to support you every step of the way. Whether it’s setup, troubleshooting, or answering questions, we provide helpful resources and friendly assistance so you always feel confident using our service."
+                "Every piece of information, from a new lead's name and project description to a booked appointment, is instantly logged and transcribed. This data is then sent to you via notifications, SMS, email, or directly into your integrated CRM/Job System, providing your team with complete context for follow-up."
         }
     ];
 
@@ -50,7 +50,7 @@ const FAQ = ({ scrollToHowItWorks }) => {
                     </div>
 
                     <div className={styles.SubtitleDiv}>
-                        <h3 className={styles.subtitle}>Browse our <span className='spanText '> FAQ section </span> for all the information you need.</h3>
+                        <h3 className={styles.subtitle}>Browse through our <span className='spanText '> FAQs Section </span> for most Common Questions Answered for You</h3>
                     </div>
 
                 </div>
