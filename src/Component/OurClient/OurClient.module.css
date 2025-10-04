@@ -106,6 +106,12 @@
     color: #24252C;
     line-height: 1.6;
 }
+.company{
+    font-size: 16px;
+    margin-top: 10px;
+    color: #cccccc;
+   
+}
 
 .author {
     font-weight: 500;
@@ -163,7 +169,7 @@
     }
 
     .card {
-        height: 350px;
+        height: 430px;
     }
 
     .subtitle {

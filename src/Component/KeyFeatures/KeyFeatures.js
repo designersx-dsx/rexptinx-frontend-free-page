@@ -14,12 +14,12 @@ const KeyFeatures = ({ scrollToHowItWorks }) => {
             desc: "Let your agent book and manage appointments directly."
         },
         {
-            icon: "Svg/call-icon.svg",
+            icon: "Svg/call-icon2.svg",
             title: "Intelligent Call Routing",
             desc: "Route calls to the right person or department."
         },
         {
-            icon: "Svg/appointment.svg",
+            icon: "Svg/call-history-icon.svg",
             title: "Call History & Summaries",
             desc: "Get Call Summery with Intent & Sentimental Analysis in our built-in Mini CRM"
         }
