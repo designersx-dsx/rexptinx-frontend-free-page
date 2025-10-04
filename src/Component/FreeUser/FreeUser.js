@@ -67,6 +67,7 @@ const FreeUser = ({ scrollToHowItWorks }) => {
 
 
 
+
               <div className={styles.CTAVideo}>
                 <div className={styles.VideoBox}>
                   <div
