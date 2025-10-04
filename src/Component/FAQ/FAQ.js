@@ -98,11 +98,12 @@ const FAQ = ({ scrollToHowItWorks }) => {
                         </div>
 
                         {/* Right section (Join box) */}
-                        <div className={styles.right}>
+                        {/* <div className={styles.right}>
                             <div className={styles.joinBox} onClick={scrollToHowItWorks}>
                                 <img src='Svg/join-rexpt.svg' alt='join-rexpt' />
                             </div>
-                        </div>
+                        </div> */}
+                        
                     </div>
                 </div>
 
