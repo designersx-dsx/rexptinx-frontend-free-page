@@ -131,7 +131,7 @@
   font-weight: 800;
   color: #6524EB;
   font-size: 54px;
-   font-family: 'Arbotek black';
+  font-family: 'Arbotek black';
 }
 
 .TextFreeUserSection h2 {
@@ -160,4 +160,18 @@
 .joinBtn img {
   width: 70%;
 
+}
+
+@media (max-width:650px) {
+  .TextFreeUserSection h1 {
+    font-size: 48px;
+  }
+
+  .TextFreeUserSection h1 .FreeText {
+    font-size: 48px;
+  }
+
+  .TextFreeUserSection h2 {
+    font-size: 48px;
+  }
 }

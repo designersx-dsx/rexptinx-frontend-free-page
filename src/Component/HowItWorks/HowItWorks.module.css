@@ -405,6 +405,9 @@
   .PhoneContainer {
     display: none;
   }
+  .arrow{
+    display: none;
+  }
 }
 
 @media (max-width:650px) {

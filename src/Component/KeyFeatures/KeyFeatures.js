@@ -41,7 +41,7 @@ const KeyFeatures = ({ scrollToHowItWorks }) => {
                     </div>
 
                     <div className={styles.KeyDiv}>
-                        <img src='Svg/keyImg.svg' alt='key-icon' />
+                        <img className={styles.keyImg} src='Svg/keyImg.svg' alt='key-icon' />
                         <div className={styles.joinBtn} onClick={scrollToHowItWorks}>
                             <img src="Svg/join-rexpt.svg" alt="join-rexpt" />
                         </div>

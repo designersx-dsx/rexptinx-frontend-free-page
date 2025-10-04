@@ -26,8 +26,11 @@
     font-weight: bold;
     color: transparent;
     -webkit-text-stroke: 1px #8a2be2;
-     font-family: 'Arboria black';
+    font-family: 'Arbotek black' !important;
 
+}
+.keyImg{
+    width: 100%;
 }
 
 .Strip {
@@ -69,43 +72,41 @@
 }
 
 .joinBtn {
-  width: 100%;
-  cursor: pointer;
-  position: relative;     
-  display: inline-block;
-  overflow: hidden;
-  transition: transform 0.4s ease;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: transform 0.4s ease;
 }
 
 .joinBtn img {
- 
-  display: block;
-  transition: transform 0.4s ease;
+
+    display: block;
+    transition: transform 0.4s ease;
 }
 
 .joinBtn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0.6) 50%,
-    rgba(255, 255, 255, 0.2) 100%
-  );
-  transform: skewX(-25deg);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0.2) 100%);
+    transform: skewX(-25deg);
 }
 
 /* Hover state */
 .joinBtn:hover {
-  transform: scale(1.03); 
+    transform: scale(1.03);
 }
 
 .joinBtn:hover::before {
-  animation: shine 0.8s forwards;
+    animation: shine 0.8s forwards;
 }
 
 /* Shine animation */
@@ -167,9 +168,11 @@
     color: #969696;
     line-height: 1.5;
 }
-.JoinBtnMob{
+
+.JoinBtnMob {
     display: none;
 }
+
 @media(max-width:768px) {
     .joinBtn img {
         width: 90%;
@@ -231,4 +234,6 @@
         justify-content: center;
         margin-top: 2rem;
     }
+
+    
 }

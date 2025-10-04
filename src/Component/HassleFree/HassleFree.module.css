@@ -40,9 +40,11 @@
 
 }
 
-.RightSection .content h1, .RightSection .content h2{
-   font-family: 'Arbotek black';
+.RightSection .content h1,
+.RightSection .content h2 {
+    font-family: 'Arbotek black';
 }
+
 .content {
     padding-left: 2rem;
 }
@@ -50,14 +52,14 @@
 .content h1,
 h2 {
     font-size: clamp(20px, 2.5vw, 45px);
-   font-family: 'Arboria Medium';
+    font-family: 'Arboria Medium';
 
 }
 
 @media(max-width:1200px) {
-   
+
     .container {
-        flex-direction: column-reverse;
+        flex-direction: column;
         gap: 2rem;
     }
 
@@ -67,7 +69,8 @@ h2 {
         justify-content: center;
         width: 100%;
     }
-     .LeftSection {
+
+    .LeftSection {
         width: 100%;
     }
 }
@@ -75,8 +78,9 @@ h2 {
 
 @media (max-width:650px) {
     .containerBox {
-  margin-top: clamp(4rem, 15vw, 20rem);
-}
+        margin-top: clamp(4rem, 15vw, 20rem);
+    }
+
     .container {
         gap: 1rem;
     }
@@ -90,6 +94,9 @@ h2 {
     }
 
     .content {
+        margin-top: 1rem;
         text-align: center;
+        padding-left: 0rem;
     }
+
 }

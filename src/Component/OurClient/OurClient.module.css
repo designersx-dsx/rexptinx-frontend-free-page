@@ -27,7 +27,7 @@
     font-weight: bold;
     color: transparent;
     -webkit-text-stroke: 1px #8a2be2;
-    font-family: 'Arboria black';
+   font-family: 'Arbotek black' !important;
 
 }
 
@@ -110,7 +110,7 @@
 .author {
     font-weight: 500;
     margin-top: 1rem;
-    color: #000000;
+    color: #6524EB;
 }
 
 .bothBtn {
@@ -142,7 +142,7 @@
 
 @media(max-width:650px) {
     .containerBox {
-        margin-top: 5rem;
+        margin-top: 3rem;
     }
 
     .container {
@@ -163,7 +163,7 @@
     }
 
     .card {
-        height: 420px;
+        height: 350px;
     }
 
     .subtitle {

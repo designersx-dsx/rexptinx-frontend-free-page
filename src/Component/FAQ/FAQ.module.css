@@ -28,7 +28,7 @@
     font-weight: bold;
     color: transparent;
     -webkit-text-stroke: 1px #8a2be2;
-    font-family: 'Arboria black';
+    font-family: 'Arbotek black' !important;
 
 }
 
@@ -108,9 +108,6 @@
 .accordion {
     border-radius: 20px;
     padding: 1.5rem;
-
-
-
 }
 
 .Heading {
@@ -167,20 +164,26 @@
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    font-size: 20px;   
+    font-size: 20px;
     transition: all 0.3s ease;
     font-family: 'Arboria Medium';
-    align-items: baseline
+    line-height: 1;
+    flex-shrink: 0;
 }
 
+/* Active and inactive states */
 .item.active .icon {
     border: 1px solid #fff;
     color: #fff;
+    background: transparent;
+    /* optional */
 }
 
 .item:not(.active) .icon {
     border: 1px solid #000;
     color: #000;
+    background: transparent;
+    /* optional */
 }
 
 .contentWrapper {
@@ -191,8 +194,7 @@
 }
 
 .contentWrapper.open {
-    max-height: 200px;
-    /* adjust based on expected content */
+    max-height: max-content;
     padding: 0px 12px 15px;
 }
 
@@ -287,6 +289,10 @@
 
 
 @media(max-width:650px) {
+    .contentWrapper.open {
+        overflow: auto;
+    }
+
     .overlay {
         top: 1%;
         flex-direction: column;
@@ -294,11 +300,28 @@
     }
 
     .right {
-        width: 100%
+        width: 100%;
+        display: none;
     }
 
     .joinBox img {
         width: 80%;
         margin-inline: auto;
+    }
+
+    .scroller img {
+        height: unset;
+    }
+
+    .ForestImg {
+        height: 120dvh;
+    }
+    .scroller{
+    display: none;
+    }
+}
+@media (max-width:370px){
+    .ForestImg {
+        height: 140dvh;
     }
 }
