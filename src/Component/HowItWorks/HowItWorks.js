@@ -2,11 +2,11 @@ import React, { useState, useRef } from "react";
 import styles from "../HowItWorks/HowItWorks.module.css";
 import Modal from "../Modal/Modal";
 import FreeAccount from "../FreeAccount/FreeAccount";
-import VariableProximity from "../AnimationFrame/AnimationFrame";
+
 
 const HowItWorks = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const containerRef = useRef(null);
+
   return (
     <>
       {" "}
@@ -14,19 +14,7 @@ const HowItWorks = () => {
         <div className={styles.container}>
           <div className={styles.TopBar}>
             <div className={styles.Title}>
-              {/* <div ref={containerRef} style={{ position: "relative" }}>
-                <VariableProximity
-                  label={
-                    "Hover me! And then star React Bits on GitHub, or else..."
-                  }
-                  className={"variable-proximity-demo"}
-                  fromFontVariationSettings="'wght' 400, 'opsz' 9"
-                  toFontVariationSettings="'wght' 1000, 'opsz' 40"
-                  containerRef={containerRef}
-                  radius={100}
-                  falloff="linear"
-                />
-              </div> */}
+            
 
               <h1 className={styles.strokeText}>How It Works</h1>
               <div className={styles.Strip}></div>
