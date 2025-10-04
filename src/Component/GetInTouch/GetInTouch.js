@@ -9,11 +9,9 @@ const GetInTouch = ({ scrollToHowItWorks }) => {
                     <div className={styles.LeftSection}>
                         <h1 className={styles.subTitle}>Let's Get In Touch.</h1>
                         <p className={styles.description}>
-                            <ul>
-                                <li>Stop Missing Calls</li>
-                                <li>Start Growing Business</li>
-                            </ul>
-                            </p>
+                            Ready to <b>Stop Missing Calls</b> and <b>start growing your business?</b>
+
+                        </p>
 
                         <div className={styles.joinImg} onClick={scrollToHowItWorks}>
                             <img src='Svg/join-rexpt-white.svg' alt='join-rexpt-white.svg' />
