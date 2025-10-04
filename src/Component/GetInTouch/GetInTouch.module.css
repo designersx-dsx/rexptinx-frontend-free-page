@@ -43,11 +43,11 @@
     margin-top: 1rem;
     color: #ffff;
     width: 80%;
-    font-size: 26px;
+    font-size: 26px;    
 }
 
-.description li {
-    color: #fff;
+.description b {
+     font-family: 'Arbotek bold';
 }
 
 .joinImg {
