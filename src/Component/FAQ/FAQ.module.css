@@ -246,6 +246,7 @@
     .faqGrid {
         grid-template-columns: repeat(1, 1fr);
         padding-bottom: 0rem;
+        padding-inline: 20px;
     }
 
     .overlay {
