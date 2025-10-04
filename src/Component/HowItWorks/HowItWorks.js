@@ -108,7 +108,7 @@ const HowItWorks = () => {
 
                 {/* Login link */}
                 <p className={styles.login}>
-                  Already have an account? <a href="#">Log In</a>
+                  {/* Already have an account? <a href="#">Log In</a> */}
                 </p>
 
                 {/* Footer */}
