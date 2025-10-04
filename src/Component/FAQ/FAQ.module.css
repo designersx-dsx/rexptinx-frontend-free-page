@@ -193,6 +193,18 @@
     position: relative;
 }
 
+@media (min-width: 1440px) and (max-width: 1600px) {
+    .ForestImg {
+        height: 130dvh;
+    }
+}
+
+@media (min-width: 1299px) and (max-width: 1439px) {
+    .ForestImg{
+        height: 150dvh;
+    }
+}
+
 @media(max-width:1300px) {
     .ForestImg {
         height: unset;
@@ -236,9 +248,10 @@
 
 
 @media(max-width:650px) {
-    .containerBox{
+    .containerBox {
         margin-top: 4rem;
     }
+
     .contentWrapper.open {
         overflow: auto;
     }
@@ -251,7 +264,7 @@
 
     .overlay {
         top: unset;
-    
+
     }
 
 
