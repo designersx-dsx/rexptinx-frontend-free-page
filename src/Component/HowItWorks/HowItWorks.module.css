@@ -21,6 +21,7 @@
   width: 100%;
   max-width: 1400px;
   margin-inline: auto;
+  position: relative;
 }
 
 .TopBar {
@@ -36,13 +37,14 @@
   font-size: clamp(40px, 13vw, 225px);
   font-weight: bold;
   color: transparent;
-  -webkit-text-stroke: 1px #8a2be2;
+  -webkit-text-stroke: 1.2px #8a2be2;
+  font-family: 'Arbotek black' !important;
 
 }
 
 .Strip {
   position: absolute;
-  bottom: 15%;
+  bottom: 13%;
   height: 80px;
   background-image: linear-gradient(#ffffff15, #ffffff);
   z-index: 11;
@@ -152,7 +154,8 @@
 .content h3 {
   margin: 0;
   font-size: clamp(24px, 2.5vw, 40px);
-  font-weight: 600;
+  font-family: 'Arboria Medium';
+
 }
 
 .content p {
@@ -380,6 +383,9 @@
   }
 }
 
+
+
+
 @media (max-width:1200px) {
   .timelineContainer {
     width: 60%;
@@ -491,4 +497,15 @@
     margin-bottom: 0px;
     padding-bottom: 0px;
   }
+
+  .arrow {
+    display: none;
+  }
+}
+
+.arrow {
+  position: absolute;
+  right: -12%;
+  bottom: 5%;
+  width: 12%;
 }

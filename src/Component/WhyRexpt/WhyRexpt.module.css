@@ -28,6 +28,7 @@
     font-weight: bold;
     color: transparent;
     -webkit-text-stroke: 1px #8a2be2;
+    font-family: 'Arboria black';
 
 }
 
@@ -114,6 +115,7 @@
 
 .subheading h3 {
     font-size: 30px;
+    font-family: 'Arbotek bold';
 }
 
 .desc p {
@@ -134,6 +136,7 @@
 
 .costEffective h3 {
     font-size: 30px;
+    font-family: 'Arbotek bold';
 }
 
 .costEffective p {
@@ -265,6 +268,7 @@
     font-size: 30px;
     color: #24252C;
     margin-bottom: 1rem;
+    font-family: 'Arbotek bold';
 }
 
 .content2 p {
@@ -320,6 +324,7 @@
 .content3 h3 {
     font-size: 30px;
     margin-bottom: 1rem;
+    font-family: 'Arbotek bold';
 
 }
 

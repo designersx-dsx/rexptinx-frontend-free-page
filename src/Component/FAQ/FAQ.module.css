@@ -28,6 +28,7 @@
     font-weight: bold;
     color: transparent;
     -webkit-text-stroke: 1px #8a2be2;
+    font-family: 'Arboria black';
 
 }
 
@@ -149,9 +150,10 @@
 }
 
 .question {
-    font-weight: 600;
+    /* font-weight: 600; */
     font-size: 18px;
     color: #000;
+    font-family: 'Arboria Medium';
 }
 
 .item.active .question {
@@ -165,9 +167,10 @@
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 20px;   
     transition: all 0.3s ease;
+    font-family: 'Arboria Medium';
+    align-items: baseline
 }
 
 .item.active .icon {
@@ -255,7 +258,7 @@
     }
 
     100% {
-        left: 110%;
+        left: 125%;
     }
 }
 

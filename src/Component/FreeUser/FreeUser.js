@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "../FreeUser/FreeUser.module.css";
 import FreeUserMobile from "./FreeUserMobile";
 import Modal from "../Modal/Modal";
+import FreeUserMobileNew from "./FreeUserMobileNew";
 
 
 const languages = [
@@ -14,7 +15,7 @@ const FreeUser = ({ scrollToHowItWorks }) => {
 
 
   const [isModalOpen, setIsModalOpen] = useState(false);
- const [selected, setSelected] = useState(languages[0]);
+  const [selected, setSelected] = useState(languages[0]);
   const [open, setOpen] = useState(false);
 
   const handleSelect = (lang) => {
@@ -46,7 +47,7 @@ const FreeUser = ({ scrollToHowItWorks }) => {
             </div>
             <div className={styles.CTASection}>
               <div className={styles.CTATextSection}>
-                <p>Join the Revolution & Transform</p>
+                <p> Join & Transform Your Business</p>
                 <ul>
                   <li>
                     Answer calls <b>24/7</b>- Even when you’re away
@@ -122,33 +123,37 @@ const FreeUser = ({ scrollToHowItWorks }) => {
           </div>
         </div>
         <div className={styles.languageDiv}>
-        <div className={`${styles.dropdown} ${open ? styles.open : ""}`}>
-      <button
-        className={styles.dropdownToggle}
-        onClick={() => setOpen(!open)}
-      >
-        <img src={selected.flag} alt={selected.name} />
-        <span>{selected.name}</span>
-        <span className={styles.arrow}>▼</span>
-      </button>
+          <div className={`${styles.dropdown} ${open ? styles.open : ""}`}>
+            <button
+              className={styles.dropdownToggle}
+              onClick={() => setOpen(!open)}
+            >
+              <img src={selected.flag} alt={selected.name} />
+              <span>{selected.name}</span>
+              <span className={styles.arrow}><svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.646447 1.14645C0.841709 0.951184 1.15829 0.951184 1.35355 1.14645L7 6.79289L12.6464 1.14645C12.8417 0.951184 13.1583 0.951184 13.3536 1.14645C13.5488 1.34171 13.5488 1.65829 13.3536 1.85355L7.35355 7.85355C7.15829 8.04882 6.84171 8.04882 6.64645 7.85355L0.646447 1.85355C0.451184 1.65829 0.451184 1.34171 0.646447 1.14645Z" fill="#24252C" stroke="#24252C" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              </span>
+            </button>
 
-      <ul className={styles.dropdownMenu}>
-        {languages.map((lang) => (
-          <li
-            key={lang.code}
-            onClick={() => handleSelect(lang)}
-            className={styles.dropdownItem}
-          >
-            <img src={lang.flag} alt={lang.name} />
-            <span>{lang.name}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+            <ul className={styles.dropdownMenu}>
+              {languages.map((lang) => (
+                <li
+                  key={lang.code}
+                  onClick={() => handleSelect(lang)}
+                  className={styles.dropdownItem}
+                >
+                  <img src={lang.flag} alt={lang.name} />
+                  <span>{lang.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
       <div className={styles.ForMobileView}>
-        <FreeUserMobile />
+        {/* <FreeUserMobile /> */}
+        <FreeUserMobileNew />
       </div>
     </>
   );

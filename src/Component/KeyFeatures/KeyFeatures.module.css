@@ -26,6 +26,7 @@
     font-weight: bold;
     color: transparent;
     -webkit-text-stroke: 1px #8a2be2;
+     font-family: 'Arboria black';
 
 }
 
@@ -100,20 +101,22 @@
 
 /* Hover state */
 .joinBtn:hover {
-  transform: scale(1.02); 
+  transform: scale(1.03); 
 }
 
 .joinBtn:hover::before {
   animation: shine 0.8s forwards;
 }
 
+/* Shine animation */
 @keyframes shine {
-  0% {
-    left: -75%;
-  }
-  100% {
-    left: 125%;
-  }
+    0% {
+        left: -45%;
+    }
+
+    100% {
+        left: 125%;
+    }
 }
 
 .RightSection {
@@ -156,6 +159,7 @@
     font-size: 23px;
     font-weight: 600;
     margin-bottom: 8px;
+    font-family: 'Arbotek bold';
 }
 
 .box p {

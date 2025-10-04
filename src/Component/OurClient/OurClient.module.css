@@ -27,6 +27,7 @@
     font-weight: bold;
     color: transparent;
     -webkit-text-stroke: 1px #8a2be2;
+    font-family: 'Arboria black';
 
 }
 
@@ -90,7 +91,8 @@
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 05px 20px rgba(0, 0, 0, 0.10);
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
 }
 
 .stars {

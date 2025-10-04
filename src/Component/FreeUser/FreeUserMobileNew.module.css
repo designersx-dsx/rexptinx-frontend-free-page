@@ -1,0 +1,163 @@
+.Badge {
+  /* position: absolute; */
+  /* display: none; */
+}
+
+.MobileContainer {
+  position: relative;
+}
+
+.MobileImgDiv {
+  height: 100dvh;
+  overflow: hidden;
+  background-image: url("/public/Images/Mobile-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-position: left 50% top 30%; */
+  background-size: cover;
+}
+
+.bgImg {
+  width: 100%;
+  height: 100dvh;
+  transform-style: preserve-3d;
+  animation: tilt3DZoom 10s ease-in-out infinite;
+  transform-origin: center center;
+
+}
+
+@keyframes tilt3DZoom {
+
+  0%,
+  50%,
+  100% {
+    transform: scale(1) rotateY(0deg);
+  }
+
+  25% {
+    transform: scale(1.03) rotateY(6deg);
+    /* tilt right */
+  }
+
+  75% {
+    transform: scale(1.03) rotateY(-6deg);
+    /* tilt left */
+  }
+}
+
+.rexGif {
+  position: absolute;
+  width: 100%;
+  top: 25dvh;
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  /* align-items: center; */
+  justify-content: center;
+  display: flex;
+}
+
+.rexGif img {
+  /* width: 68%; */
+  height: 35dvh;
+}
+
+.gifline {
+  width: 100%;
+  margin: 0px auto;
+  border: none;
+  border-top: 2px solid #ccc;
+}
+
+.CrossDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.HorizontalLine {
+  position: absolute;
+  width: 100%;
+  top: 34.3dvh;
+  /* bottom: -10.5%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+/* hello */
+
+.TextSectionBelowRex {
+  position: absolute;
+  top: 60dvh;
+  padding: 1.2rem;
+}
+
+.TextSectionBelowRex h1 {
+  text-align: start;
+  color: #24252c;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 300;
+}
+
+.TextSectionBelowRex p {
+  color: #24252c;
+  font-size: 18px;
+  text-align: start;
+  padding-bottom: 1rem;
+  font-weight: 400;
+  font-family: var(--font-lato);
+}
+
+.BoldTagLato {
+  font-weight: 800;
+}
+
+.GetCTAbtn {
+  margin-bottom: 0.2rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.TextFreeUserSection h1 {
+  font-size: var(--title-size);
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #24252C;
+  font-size: 50px;
+}
+
+.TextFreeUserSection h1 .FreeText {
+  text-decoration: underline;
+  font-weight: 800;
+  color: #6524EB;
+  font-size: 54px;
+   font-family: 'Arbotek black';
+}
+
+.TextFreeUserSection h2 {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: clamp(40px, 6vw, 85px);
+  color: #24252C;
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  font-family: 'Arboria Light';
+}
+
+.INText {
+  font-size: 30px;
+}
+
+.INText b {
+  font-weight: 800;
+  font-family: 'Arbotek black';
+}
+
+.joinBtn {
+  margin-top: 1rem;
+}
+
+.joinBtn img {
+  width: 70%;
+
+}

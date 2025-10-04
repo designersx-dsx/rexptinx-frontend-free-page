@@ -1,4 +1,76 @@
+
+
+@font-face {
+  font-family: 'Arboria Light';
+  src: url('/public/Fonts/fonnts.com-Arboria_Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arboria Medium';
+  src: url('/public/Fonts/fonnts.com-Arboria_Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arboria Medium Italic';
+  src: url('/public/Fonts/fonnts.com-Arboria_Medium_Italic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Arboria Thin';
+  src: url('/public/Fonts/fonnts.com-Arboria_Thin.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arbotek Light';
+  src: url('/public/Fonts/fonnts.com-Arbotek_Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arbotek Light Rounded';
+  src: url('/public/Fonts/fonnts.com-Arbotek_Light_Rounded.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arbotek Thin';
+  src: url('/public/Fonts/fonnts.com-Arbotek_Thin.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arbotek Ultra';
+  src: url('/public/Fonts/fonnts.com-Arbotek_Ultra.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arbotek black';
+  src: url('/public/Fonts/fonnts.com-Arboria_Black.otf') format('opentype');
+  font-weight: bolder;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Arbotek bold';
+  src: url('/public/Fonts/fonnts.com-Arboria_Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
+  font-family: 'Arboria Medium';
   margin: 0;
 }
 
@@ -8,15 +80,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato", sans-serif;
+  
+  font-family: 'Arboria Medium', sans-serif;
   margin: 0px;
   color: #24252C;
+  font-weight: 400;
+  
+
 }
 
 p,
 ul,
 li {
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif; */
+  font-family: 'Arboria Medium', sans-serif;
   margin: 0px;
   color: #24252C;
 }
@@ -61,4 +138,38 @@ li {
   --p2-size: clamp(14px, 1.5vw, 20px);
   --p-color: #24252c;
   --p-color2: #ffffff;
+}
+
+.floatingButton {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  z-index: 999;
+  animation: slideUp 0.4s ease-out forwards;
+}
+
+.floatingButton button {
+  padding: 12px 20px;
+  border-radius: 25px;
+  background: #6524EB;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.floatingButton img {
+  width: 100%;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateX(-50%) translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
 }
