@@ -4,11 +4,21 @@ import Modal from "../Modal/Modal";
 import FreeAccount from "../FreeAccount/FreeAccount";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { sendEmail } from "../../lib/Store";
-const HowItWorks = () => {
+import { PortableText } from "@portabletext/react";
+const HowItWorks = ({ howitworks }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [errMsg, setErrMsg] = useState("");
+  if (!howitworks) return null;
+  const {
+    sectionLabel,
+    headlinePrefix,
+    headlineHighlight,
+    headlineSuffix,
+    steps = [],
+    ctaCard,
+  } = howitworks;
 
   const handleCreateAccount = async () => {
     setErrMsg("");
@@ -43,6 +53,20 @@ const HowItWorks = () => {
     }
   };
 
+  const ptComponents = {
+    marks: {
+      purple: ({ children }) => (
+        <span className="text-purple-500 font-semibold">{children}</span>
+      ),
+      break: ({ children }) => (
+        <>
+          <br />
+          {children}
+        </>
+      ),
+    },
+  };
+
   return (
     <>
       {" "}
@@ -50,68 +74,88 @@ const HowItWorks = () => {
         <div className={styles.container}>
           <div className={styles.TopBar}>
             <div className={styles.Title}>
-              <h1 className={styles.strokeText}>How It Works</h1>
+              <h1 className={styles.strokeText}>{sectionLabel}</h1>
               <div className={styles.Strip}></div>
             </div>
 
             <div className={styles.SubtitleDiv}>
               <h3 className={styles.subtitle}>
-                A simple, <span className="spanText ">3 Point process</span> to
-                help you get started.
+                {headlinePrefix}{" "}
+                <span className="spanText ">{headlineHighlight}</span>{" "}
+                {headlineSuffix}
               </h3>
             </div>
           </div>
 
           <div className={styles.timelineWrapper}>
             <div className={styles.timelineContainer}>
-              <div className={styles.step}>
-                <div className={styles.leftIcon}>
-                  <img src="Svg/Sign-up.svg" alt="Sign-upr" />
-                </div>
-                <div className={styles.icon}>1</div>
-                <div className={styles.content}>
-                  <h3>Sign Up</h3>
-                  <p>
-                    Tell us a little about your business to get your
-                    personalized <b>AI agent.</b>
-                  </p>
-                </div>
-              </div>
+              {steps.map((s, idx) => (
+                <div className={styles.step} key={idx}>
+                  <div className={styles.leftIcon}>
+                    {/* icon from Sanity, fallback to your old SVG if missing */}
+                    {s?.icon?.src ? (
+                      <img
+                        src={s.icon.src}
+                        alt={s?.icon?.alt || s.title || "icon"}
+                      />
+                    ) : (
+                      <img
+                        src={
+                          idx === 0
+                            ? "Svg/Sign-up.svg"
+                            : idx === 1
+                            ? "Svg/Customize.svg"
+                            : "Svg/Go-live.svg"
+                        }
+                        alt="step-icon"
+                      />
+                    )}
+                  </div>
 
-              <div className={styles.step}>
-                <div className={styles.leftIcon}>
-                  <img src="Svg/Customize.svg" alt="Customize" />
-                </div>
-                <div className={styles.icon}>2</div>
-                <div className={styles.content}>
-                  <h3>Customize</h3>
-                  <p>
-                    Use our simple interface to{" "}
-                    <b>customize your agent’s voice</b> and Persona in minutes.
-                  </p>
-                </div>
-              </div>
+                  <div className={styles.icon}>{idx + 1}</div>
 
-              <div className={styles.step}>
-                <div className={styles.leftIcon}>
-                  <img src="Svg/Go-live.svg" alt="Go-live" />
-                </div>
-                <div className={styles.icon}>3</div>
-                <div className={styles.content}>
-                  <h3>Go Live</h3>
-                  <p>
-                    Forward your <b>business calls</b> to your new Rexpt number
-                    and let your <b>AI receptionist</b> handle the rest.
-                  </p>
-                  <div
-                    className={styles.cerateBtn}
-                    onClick={() => setIsModalOpen(true)}
-                  >
-                    <img src="Svg/btn-shape.svg" alt="btn-shape" />
-                    <p>Create my FREE account</p>
+                  <div className={styles.content}>
+                    <h3>{s.title}</h3>
+
+                    {Array.isArray(s.description) &&
+                    s.description.length > 0 ? (
+                      <PortableText
+                        value={s.description}
+                        components={ptComponents}
+                      />
+                    ) : (
+                      s.descriptionPlain && <p>{s.descriptionPlain}</p>
+                    )}
+
+                    {/* CTA button only on the last step (as in your static design).
+                        Move/duplicate if you want it elsewhere */}
+                    {idx === steps.length - 1 && (
+                      <div
+                        className={styles.cerateBtn}
+                        onClick={() => setIsModalOpen(true)}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" || e.key === " ")
+                            setIsModalOpen(true);
+                        }}
+                      >
+                        <img src="Svg/btn-shape.svg" alt="btn-shape" />
+                        <p>
+                          {ctaCard?.ctaLabel?.length ? (
+                            <PortableText
+                              value={ctaCard.ctaLabel}
+                              components={ptComponents}
+                            />
+                          ) : (
+                            ctaCard?.ctaLabelPlain || "Create my FREE account"
+                          )}
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
 
             <div className={styles.PhoneContainer}>
@@ -119,28 +163,61 @@ const HowItWorks = () => {
                 <div className={styles.card}>
                   {/* Logo */}
                   <div className={styles.logo}>
-                    <img src="Svg/rexpt-logo.svg" alt="rexpt-logo" />
+                    {ctaCard?.logo?.src ? (
+                      <img
+                        src={ctaCard.logo.src}
+                        alt={ctaCard.logo.alt || "logo"}
+                      />
+                    ) : (
+                      <img src="Svg/rexpt-logo.svg" alt="rexpt-logo" />
+                    )}
                   </div>
 
                   <hr className={styles.divider} />
 
                   {/* Heading */}
                   <h2 className={styles.heading}>
-                    Join Free-
-                    <br />
-                    Get Started
+                    {Array.isArray(ctaCard?.title) &&
+                    ctaCard.title.length > 0 ? (
+                      <PortableText
+                        value={ctaCard.title}
+                        components={ptComponents}
+                      />
+                    ) : (
+                      ctaCard?.titlePlain && (
+                        <>
+                          {ctaCard.titlePlain.split("\n").map((line, i) => (
+                            <h2 key={i}>
+                              {line}
+                              {i !==
+                                ctaCard.titlePlain.split("\n").length - 1 && (
+                                <br />
+                              )}
+                            </h2>
+                          ))}
+                        </>
+                      )
+                    )}
                   </h2>
                   <p className={styles.subText}>
-                    If it does not exist, We will create a{" "}
-                    <b>New FREE Account</b> for you. Make sure the email ID
-                    provided is correct.
+                    {Array.isArray(ctaCard?.subtext) &&
+                    ctaCard.subtext.length > 0 ? (
+                      <PortableText
+                        value={ctaCard.subtext}
+                        components={ptComponents}
+                      />
+                    ) : (
+                      ctaCard?.subtextPlain && <p>{ctaCard.subtextPlain}</p>
+                    )}
                   </p>
 
                   {/* Input */}
                   <div className={styles.InputDiv}>
                     <input
                       type="email"
-                      placeholder="Johnvick@gmail.com"
+                      placeholder={
+                        ctaCard?.emailPlaceholder || "johnwick@gmail.com"
+                      }
                       className={`${styles.input} ${
                         errMsg ? styles.inputError : ""
                       }`}
@@ -183,10 +260,18 @@ const HowItWorks = () => {
                     <p>
                       {loading ? (
                         "Processing…"
+                      ) : Array.isArray(ctaCard?.ctaLabel) &&
+                        ctaCard.ctaLabel.length > 0 ? (
+                        <PortableText
+                          value={ctaCard.ctaLabel}
+                          components={ptComponents}
+                        />
                       ) : (
-                        <>
-                          Create my <b>FREE</b> account
-                        </>
+                        ctaCard?.ctaLabelPlain || (
+                          <>
+                            Create my <b>FREE</b> account
+                          </>
+                        )
                       )}
                     </p>
                   </div>
