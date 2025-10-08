@@ -267,9 +267,10 @@
   border-radius: 50%;
 }
 
-.JoinPoints{
+.JoinPoints {
   padding-inline: 20px;
 }
+
 .JoinBox {
   background-color: #fff;
   border-radius: 30px;
@@ -283,20 +284,35 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 }
-.JoinBox p{
+
+.JoinBox p {
   font-size: 26px;
 }
-.JoinBox li{
+
+.JoinBox li {
   font-size: 20px;
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Langauge  CSS  End*/
 
 @media (max-width:650px) {
-  .JoinBox{
-  
+  .JoinBox ul {
+    list-style: none;
+    padding-left: 0;
   }
+
+  .lidiv {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .JoinBox li {
+    margin-bottom: 0px;
+  }
+
   .TextFreeUserSection h1 {
     font-size: 48px;
   }

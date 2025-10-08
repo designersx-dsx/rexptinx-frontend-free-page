@@ -29,7 +29,8 @@
     font-family: 'Arbotek black' !important;
 
 }
-.keyImg{
+
+.keyImg {
     width: 100%;
 }
 
@@ -233,7 +234,9 @@
         align-items: center;
         justify-content: center;
         margin-top: 2rem;
+        display: none;
+
     }
 
-    
+
 }

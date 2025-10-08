@@ -136,7 +136,19 @@ const FreeUserMobileNew = () => {
         <div className={styles.JoinPoints}>
           <div className={styles.JoinBox}>
             <p> Join the Revolution &amp; Transform</p>
-            <ul><li>Boost Profit by up to 100% with "0" <b>Missed Calls</b></li><li>Manage <b>Appointment Booking</b> for Better Efficiency</li><li>SAVE <b>up to 87%</b> compared to Traditional System</li></ul>
+            <ul>
+              <div className={styles.lidiv}>
+                <img src="/Svg/free-call.svg" alt="free-call" />
+                <li>Boost Profit by up to 100% with "0" <b>Missed Calls</b></li>
+              </div>
+              <div className={styles.lidiv}>
+                <img src="/Svg/free-watch.svg" alt="free-watch" />
+                <li>Manage <b>Appointment Booking</b> for Better Efficiency</li>
+              </div>
+              <div className={styles.lidiv}>
+                <img src="/Svg/free-save-money.svg" alt="free-save-money" />
+                <li>SAVE <b>up to 87%</b> compared to Traditional System</li>
+              </div></ul>
 
           </div>
 

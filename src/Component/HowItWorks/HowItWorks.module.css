@@ -392,7 +392,7 @@
 @media (max-width: 1023px) {
   .timelineContainer {
     width: 100%;
-    
+
   }
 
   .PhoneContainer {
@@ -435,8 +435,8 @@
   }
 
   .step {
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column; */
+    align-items: flex-start;
     gap: 1rem;
     border-bottom: 1px dashed #d9d9d9;
     padding-bottom: 1rem;
@@ -448,13 +448,14 @@
   }
 
   .content {
-    text-align: center;
+    /* text-align: center; */
   }
 
   .content p {
     width: unset;
     font-size: 18px;
     padding-bottom: 1rem;
+    margin-top: 5px;
   }
 }
 
@@ -473,6 +474,7 @@
     display: block;
     width: 100%;
     height: auto;
+    display: none;
   }
 
   .cerateBtn p {

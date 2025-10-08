@@ -51,7 +51,7 @@
 
 .content h1,
 h2 {
-    font-size: clamp(20px, 2.5vw, 45px);
+    font-size: clamp(24px, 2.5vw, 45px);
     font-family: 'Arboria Medium';
 
 }
@@ -99,4 +99,12 @@ h2 {
         padding-left: 0rem;
     }
 
+}
+
+@media(max-width:355px) {
+
+    .content h1,
+    h2 {
+        font-size: 20px;
+    }
 }

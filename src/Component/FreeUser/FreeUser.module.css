@@ -216,6 +216,7 @@
   border-radius: 45px;
   display: flex;
   color: #24252c;
+  gap: 1rem;
   width: 56%;
   padding: 2rem;
   margin-top: 2rem;
@@ -235,11 +236,19 @@
 
 .CTATextSection li {
   font-size: 24px;
+
+  text-decoration: none;
+}
+
+.lidiv {
+  display: flex;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 
 .CTATextSection ul {
-  padding-left: 1.2rem
+  padding-left: 0px;
+  list-style: none;
 }
 
 .CTATextSection b {
