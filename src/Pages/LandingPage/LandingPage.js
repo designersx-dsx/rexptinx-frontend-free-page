@@ -1,28 +1,42 @@
-import React, { useRef, useState, useEffect } from 'react'
-import FreeUser from '../../Component/FreeUser/FreeUser'
-import HassleFree from '../../Component/HassleFree/HassleFree'
-import HowItWorks from '../../Component/HowItWorks/HowItWorks'
-import KeyFeatures from '../../Component/KeyFeatures/KeyFeatures'
-import WhyRexpt from '../../Component/WhyRexpt/WhyRexpt'
-import OurClient from '../../Component/OurClient/OurClient'
-import GetInTouch from '../../Component/GetInTouch/GetInTouch'
-import FAQ from '../../Component/FAQ/FAQ'
-import Footer from '../../Component/Footer/Footer'
-import Modal from '../../Component/Modal/Modal'
-import FreeAccount from '../../Component/FreeAccount/FreeAccount'
+import React, { useRef, useState, useEffect } from "react";
+import FreeUser from "../../Component/FreeUser/FreeUser";
+import HassleFree from "../../Component/HassleFree/HassleFree";
+import HowItWorks from "../../Component/HowItWorks/HowItWorks";
+import KeyFeatures from "../../Component/KeyFeatures/KeyFeatures";
+import WhyRexpt from "../../Component/WhyRexpt/WhyRexpt";
+import OurClient from "../../Component/OurClient/OurClient";
+import GetInTouch from "../../Component/GetInTouch/GetInTouch";
+import FAQ from "../../Component/FAQ/FAQ";
+import Footer from "../../Component/Footer/Footer";
+import Modal from "../../Component/Modal/Modal";
+import FreeAccount from "../../Component/FreeAccount/FreeAccount";
+import { client } from "../../lib/SanityConfig";
+import { fetchHeroSection } from "../../lib/sanityQueries";
 
 const LandingPage = () => {
-   
   const howItWorksRef = useRef(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showFloatingButton, setShowFloatingButton] = useState(false);
+  const [heroSection, setHeroSection] = useState(null);
+  console.log(heroSection, "heroSectiion");
+
+  useEffect(() => {
+    Promise.all([client.fetch(fetchHeroSection)])
+      .then(([heroData]) => {
+        setHeroSection(heroData);
+      })
+      .catch((error) => {
+        console.error("Error fetching data: ", error);
+      });
+  }, []);
 
   const scrollToHowItWorks = () => {
     if (window.innerWidth > 1020) {
       const element = howItWorksRef.current;
       if (element) {
         const yOffset = 400;
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        const y =
+          element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
     } else {
@@ -30,7 +44,6 @@ const LandingPage = () => {
     }
   };
 
-  // Floating button show/hide logic (mobile only)
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -43,10 +56,8 @@ const LandingPage = () => {
         setShowFloatingButton(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleScroll); // responsive check
-
+    window.addEventListener("resize", handleScroll); 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
@@ -54,10 +65,12 @@ const LandingPage = () => {
   }, []);
 
   return (
-   
     <>
       <div>
-        <FreeUser scrollToHowItWorks={scrollToHowItWorks} />
+        <FreeUser
+          scrollToHowItWorks={scrollToHowItWorks}
+          heroSection={heroSection}
+        />
         <HassleFree />
         <div ref={howItWorksRef}>
           <HowItWorks />
@@ -80,9 +93,7 @@ const LandingPage = () => {
 
         {/* Floating Button (Mobile Only) */}
         {showFloatingButton && (
-          <div
-            className="floatingButton" onClick={() => setIsModalOpen(true)}
-          >
+          <div className="floatingButton" onClick={() => setIsModalOpen(true)}>
             <img src="Svg/join-rexpt.svg" alt="join-rexpt" />
           </div>
         )}
@@ -92,14 +103,15 @@ const LandingPage = () => {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         bgColor="transparent"
-        boxShadow="unset" closeColor="#fff"
+        boxShadow="unset"
+        closeColor="#fff"
         // height="95dvh"
         maxWidth="500px"
       >
         <FreeAccount />
       </Modal>
     </>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;

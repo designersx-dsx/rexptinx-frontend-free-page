@@ -12,8 +12,6 @@ const languages = [
   { code: "in", name: "Hindi", flag: "https://flagcdn.com/in.svg" },
 ];
 const FreeUser = ({ scrollToHowItWorks }) => {
-
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selected, setSelected] = useState(languages[0]);
   const [open, setOpen] = useState(false);
