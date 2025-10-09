@@ -2,12 +2,13 @@ import logo from "./logo.svg";
 import { useEffect } from "react";
 import "./App.css";
 import LandingPage from "./Pages/LandingPage/LandingPage";
-
+import GoogleTranslateBoot from "./Component/GoogleTranslateBoot";
 function App() {
   return (
     <div className="App">
       {/* <div id="google_translate_element" style={{ display: "none" }} /> */}
       <LandingPage />
+      {/* <GoogleTranslateBoot pageLanguage="en" languages={["en", "fr"]} /> */}
     </div>
   );
 }

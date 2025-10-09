@@ -1,37 +1,89 @@
-import React from 'react'
-import styles from "../Footer/Footer.module.css"
-const Footer = () => {
+import React from "react";
+import styles from "../Footer/Footer.module.css";
+const platformIconSrc = (platform) => {
+  switch ((platform || "").toLowerCase()) {
+    case "linkedin":
+      return "Svg/linkedin.svg";
+    case "instagram":
+      return "Svg/instagram.svg";
+    case "facebook":
+      return "Svg/facebook.svg";
+    case "youtube":
+      return "Svg/youtube.svg";
+    case "twitter":
+      return "Svg/twitter.svg";
+    default:
+      return "Svg/link.svg";
+  }
+};
+const Footer = ({ footer }) => {
+  if (footer && footer.enabled === false) return null;
+
+  const year = new Date().getFullYear();
+  const logoSrc = footer?.logo?.src || "Svg/rexpt-logo.svg";
+  const logoAlt = footer?.logo?.alt || "rexpt";
+  const copyright = footer?.copyright || `Copyright ${year} © rexpt`;
+
+  const socials =
+    Array.isArray(footer?.socials) && footer.socials.length
+      ? footer.socials
+      : [
+          {
+            platform: "linkedin",
+            url: "https://www.linkedin.com/company/rxpt/",
+            newTab: true,
+          },
+          {
+            platform: "instagram",
+            url: "https://www.instagram.com/rexptus/",
+            newTab: true,
+          },
+          {
+            platform: "facebook",
+            url: "https://www.facebook.com/rexptus",
+            newTab: true,
+          },
+          {
+            platform: "youtube",
+            url: "https://www.youtube.com/@rexptin",
+            newTab: true,
+          },
+        ];
+
   return (
     <div className={styles.container}>
       <footer className={styles.footer}>
-        {/* Left - Logo */}
         <div className={styles.left}>
-          <img src="Svg/rexpt-logo.svg" alt="rexpt" className={styles.logo} />
+          <img src={logoSrc} alt={logoAlt} className={styles.logo} />
         </div>
-
-        {/* Center - Copyright */}
         <div className={styles.center}>
-          <p>Copyright 2025 © rexpt</p>
+          <p>{copyright}</p>
         </div>
-
-        {/* Right - Social Icons */}
         <div className={styles.right}>
-          <a href="https://www.linkedin.com/company/rxpt/" target="_blank" rel="noopener noreferrer">
-            <img src="Svg/linkedin.svg" alt="LinkedIn" />
-          </a>
-          <a href="https://www.instagram.com/rexptus/" target="_blank" rel="noopener noreferrer">
-            <img src="Svg/instagram.svg" alt="Instagram" />
-          </a>
-          <a href="https://www.facebook.com/rexptus" target="_blank" rel="noopener noreferrer">
-            <img src="Svg/facebook.svg" alt="Facebook" />
-          </a>
-          <a href="https://www.youtube.com/@rexptin" target="_blank" rel="noopener noreferrer">
-            <img src="Svg/youtube.svg" alt="YouTube" />
-          </a>
+          {socials.map((s, i) => {
+            const href = s.url;
+            const target = s.newTab === false ? "_self" : "_blank";
+            const rel = s.newTab === false ? undefined : "noopener noreferrer";
+            const aria = s.ariaLabel || `Visit us on ${s.platform || "social"}`;
+            const imgSrc = s.icon?.src || platformIconSrc(s.platform);
+            const imgAlt = s.icon?.alt || (s.platform ? s.platform : "social");
+
+            if (!href) return null;
+            return (
+              <a
+                key={`${s.platform || "social"}-${i}`}
+                href={href}
+                target={target}
+                rel={rel}
+                aria-label={aria}
+              >
+                <img src={imgSrc} alt={imgAlt} />
+              </a>
+            );
+          })}
         </div>
       </footer>
     </div>
-  )
-}
-
-export default Footer
+  );
+};
+export default Footer;

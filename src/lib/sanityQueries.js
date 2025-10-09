@@ -41,6 +41,7 @@ export const fetchBadgeSection = `
 // How It Works
 export const fetchHowItWorks = `
 *[_type == "HowItWorks"][0]{
+enabled,
 sectionLabel,
   headlinePrefix,
   headlineHighlight,
@@ -68,6 +69,7 @@ sectionLabel,
 // Key Features
 export const fetchKeyFeaturesSection = `
 *[_type == "FreeKeyFeaturesSection"][0]{
+enabled,
 sectionLabel,
   title,
   subtext,
@@ -87,6 +89,7 @@ sectionLabel,
 `;
 export const fetchWhyRexptSection = `
 *[_type == "WhyRexptSection"][0]{
+enabled,
   sectionLabel,
   title,
   "titlePlain": pt::text(title),
@@ -98,9 +101,10 @@ export const fetchWhyRexptSection = `
     "illustration": {"src": illustration.asset->url, "alt": illustration.alt}
   }
 }
-`
+`;
 export const fetchTestimonialsSection = `
 *[_type == "FreeTestimonialsSection"][0]{
+enabled,
   sectionLabel,
   title,
   "titlePlain": pt::text(title),
@@ -116,7 +120,7 @@ export const fetchTestimonialsSection = `
     "quotePlain": pt::text(quote)
   }
 }
-`
+`;
 export const fetchGetInTouch = `
 *[_type == "FreeGetInTouch" && enabled == true][0]{
   enabled,
@@ -132,5 +136,44 @@ export const fetchGetInTouch = `
   },
   "rightGraphic": { "src": rightGraphic.asset->url, "alt": rightGraphic.alt }
 }
-`
-
+`;
+export const fetchFaqSection = `
+*[_type == "FreeFaqSection" && enabled == true][0]{
+  enabled,
+  sectionLabel,
+  headline,
+  "headlinePlain": pt::text(headline),
+  categories[]{
+    title,
+    featured{
+      question,
+      answer,
+      "answerPlain": pt::text(answer)
+    },
+    faqs[]{
+      question,
+      answer,
+      "answerPlain": pt::text(answer),
+      defaultOpen
+    }
+  }
+}
+`;
+export const fetchFooterSection = `
+*[_type == "FreeFooter" && enabled == true][0]{
+  enabled,
+  "logo": { "src": logo.asset->url, "alt": logo.alt },
+  copyright,
+  socials[]{
+    platform,
+    url,
+    ariaLabel,
+    newTab,
+    "icon": select(
+      defined(icon) => { "src": icon.asset->url, "alt": icon.alt },
+      // if no custom icon, return null so the frontend can use a default
+      true => null
+    )
+  }
+}
+`;

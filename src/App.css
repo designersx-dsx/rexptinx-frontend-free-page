@@ -1,0 +1,5 @@
+/* Keep Google’s inline highlight from messing up layout */
+.goog-text-highlight {
+  background: transparent !important;
+  box-shadow: none !important;
+}

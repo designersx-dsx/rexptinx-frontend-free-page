@@ -19,10 +19,14 @@ import {
   fetchWhyRexptSection,
   fetchTestimonialsSection,
   fetchGetInTouch,
+  fetchFaqSection,
+  fetchFooterSection,
 } from "../../lib/sanityQueries";
+import FullPageLoader from "../../Component/Loader";
 
 const LandingPage = () => {
   const howItWorksRef = useRef(null);
+  const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showFloatingButton, setShowFloatingButton] = useState(false);
   const [heroSection, setHeroSection] = useState(null);
@@ -32,19 +36,13 @@ const LandingPage = () => {
   const [rexptSectionPage, setRexptSectionPage] = useState(null);
   const [testimonialSection, setTestimonialSection] = useState(null);
   const [getInTouch, setgetInTouch] = useState(null);
-  console.log(getInTouch, "getInTouch");
+  const [faq, setFaq] = useState(null);
+  const [footer, setFooter] = useState(null);
   useEffect(() => {
-    Promise.all([
-      client.fetch(fetchHeroSection),
-      client.fetch(fetchBadgeSection),
-      client.fetch(fetchHowItWorks),
-      client.fetch(fetchKeyFeaturesSection),
-      client.fetch(fetchWhyRexptSection),
-      client.fetch(fetchTestimonialsSection),
-      client.fetch(fetchGetInTouch),
-    ])
-      .then(
-        ([
+    let mounted = true;
+    (async () => {
+      try {
+        const [
           heroData,
           badgeData,
           howitworksdata,
@@ -52,20 +50,48 @@ const LandingPage = () => {
           rexptSectionData,
           testimonialdata,
           getInTouchData,
-        ]) => {
-          setHeroSection(heroData);
-          setBadgeSection(badgeData);
-          sethowitworks(howitworksdata);
-          setKeyFeatureSection(fetchKeyFeaturesSectiondata);
-          setRexptSectionPage(rexptSectionData);
-          setTestimonialSection(testimonialdata);
-          setgetInTouch(getInTouchData);
-        }
-      )
-      .catch((error) => {
-        console.error("Error fetching data: ", error);
-      });
+          faqdata,
+          footerData,
+        ] = await Promise.all([
+          client.fetch(fetchHeroSection),
+          client.fetch(fetchBadgeSection),
+          client.fetch(fetchHowItWorks),
+          client.fetch(fetchKeyFeaturesSection),
+          client.fetch(fetchWhyRexptSection),
+          client.fetch(fetchTestimonialsSection),
+          client.fetch(fetchGetInTouch),
+          client.fetch(fetchFaqSection),
+          client.fetch(fetchFooterSection),
+        ]);
+        if (!mounted) return;
+        setHeroSection(heroData);
+        setBadgeSection(badgeData);
+        sethowitworks(howitworksdata);
+        setKeyFeatureSection(fetchKeyFeaturesSectiondata);
+        setRexptSectionPage(rexptSectionData);
+        setTestimonialSection(testimonialdata);
+        setgetInTouch(getInTouchData);
+        setFaq(faqdata);
+        setFooter(footerData);
+      } catch (err) {
+        console.error("Error fetching data:", err);
+      } finally {
+        if (mounted) setLoading(false);
+      }
+    })();
+    return () => {
+      mounted = false;
+    };
   }, []);
+  useEffect(() => {
+    if (loading) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = prev;
+      };
+    }
+  }, [loading]);
 
   const scrollToHowItWorks = () => {
     if (window.innerWidth > 1020) {
@@ -101,38 +127,49 @@ const LandingPage = () => {
     };
   }, []);
 
+  if (loading) return <FullPageLoader />;
   return (
     <>
       <div>
-        {/* {heroSection?.enabled === true && ( */}
-        <FreeUser
-          scrollToHowItWorks={scrollToHowItWorks}
-          heroSection={heroSection}
-        />
-        {/* )} */}
-        {/* {badgeSection?.enabled === true && ( */}
-        <HassleFree badgeSection={badgeSection} />
-        {/* )} */}
-        {/* {howitworks?.enabled === true && ( */}
-        <div ref={howItWorksRef}>
-          <HowItWorks howitworks={howitworks} />
-        </div>
-        {/* )} */}
-        <KeyFeatures
-          scrollToHowItWorks={scrollToHowItWorks}
-          keyfeatureSectiondata={keyfeatureSectiondata}
-        />
-        <WhyRexpt
-          scrollToHowItWorks={scrollToHowItWorks}
-          rexptSectionPage={rexptSectionPage}
-        />
-        <OurClient testimonialSection={testimonialSection} />
-        <GetInTouch
-          scrollToHowItWorks={scrollToHowItWorks}
-          getInTouch={getInTouch}
-        />
-        <FAQ scrollToHowItWorks={scrollToHowItWorks} />
-        <Footer />
+        {heroSection?.enabled === true && (
+          <FreeUser
+            scrollToHowItWorks={scrollToHowItWorks}
+            heroSection={heroSection}
+          />
+        )}
+        {badgeSection?.enabled === true && (
+          <HassleFree badgeSection={badgeSection} />
+        )}
+        {howitworks?.enabled === true && (
+          <div ref={howItWorksRef}>
+            <HowItWorks howitworks={howitworks} />
+          </div>
+        )}
+        {keyfeatureSectiondata?.enabled === true && (
+          <KeyFeatures
+            scrollToHowItWorks={scrollToHowItWorks}
+            keyfeatureSectiondata={keyfeatureSectiondata}
+          />
+        )}
+        {rexptSectionPage?.enabled === true && (
+          <WhyRexpt
+            scrollToHowItWorks={scrollToHowItWorks}
+            rexptSectionPage={rexptSectionPage}
+          />
+        )}
+        {testimonialSection?.enabled === true && (
+          <OurClient testimonialSection={testimonialSection} />
+        )}
+        {getInTouch?.enabled === true && (
+          <GetInTouch
+            scrollToHowItWorks={scrollToHowItWorks}
+            getInTouch={getInTouch}
+          />
+        )}
+        {faq?.enabled === true && (
+          <FAQ scrollToHowItWorks={scrollToHowItWorks} faq={faq} />
+        )}
+        {footer?.enabled === true && <Footer footer={footer} />}
         <Modal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}

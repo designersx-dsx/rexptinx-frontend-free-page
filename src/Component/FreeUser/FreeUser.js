@@ -1,22 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../FreeUser/FreeUser.module.css";
 import FreeUserMobile from "./FreeUserMobile";
 import Modal from "../Modal/Modal";
 import FreeUserMobileNew from "./FreeUserMobileNew";
+import { applyLanguage } from "../GoogleTranslateBoot";
 const languages = [
   { code: "en", name: "English", flag: "https://flagcdn.com/us.svg" },
   { code: "fr", name: "French", flag: "https://flagcdn.com/fr.svg" },
-  { code: "de", name: "German", flag: "https://flagcdn.com/de.svg" },
-  { code: "in", name: "Hindi", flag: "https://flagcdn.com/in.svg" },
 ];
 const FreeUser = ({ scrollToHowItWorks, heroSection }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selected, setSelected] = useState(languages[0]);
   const [open, setOpen] = useState(false);
 
-  const handleSelect = (lang) => {
+  // useEffect(() => {
+  //   const saved = localStorage.getItem("site_lang") || "en";
+  //   const match = languages.find((l) => l.code === saved);
+  //   if (match) setSelected(match);
+  //   applyLanguage(saved);
+  // }, []);
+  const handleSelect = async (lang) => {
     setSelected(lang);
     setOpen(false);
+    // localStorage.setItem("site_lang", lang.code);
+    // await applyLanguage(lang.code);
+    // window.dispatchEvent(new Event("gtranslate:reapply"));
   };
 
   const {
@@ -28,7 +36,7 @@ const FreeUser = ({ scrollToHowItWorks, heroSection }) => {
     featuresTitle,
     features = [],
     cta = {},
-    heroGif, 
+    heroGif,
   } = heroSection || {};
 
   const heroGifUrl =
@@ -42,7 +50,7 @@ const FreeUser = ({ scrollToHowItWorks, heroSection }) => {
     cta?.WatchRexUrl || "https://www.youtube.com/embed/qPuwdJjkBms?autoplay=1";
   return (
     <>
-      <div className={styles.ForDeskTop}>
+      <div className={`${styles.ForDeskTop} notranslate`} translate="no">
         <div className={styles.containerBox}>
           <div className={styles.container}>
             <div className={styles.ShapeDiv}>
@@ -179,7 +187,7 @@ const FreeUser = ({ scrollToHowItWorks, heroSection }) => {
       </div>
       <div className={styles.ForMobileView}>
         {/* <FreeUserMobile /> */}
-        <FreeUserMobileNew />
+        <FreeUserMobileNew heroSection={heroSection} />
       </div>
     </>
   );
