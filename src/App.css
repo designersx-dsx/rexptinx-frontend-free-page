@@ -1,5 +1,4 @@
-/* Keep Google’s inline highlight from messing up layout */
-.goog-text-highlight {
-  background: transparent !important;
-  box-shadow: none !important;
-}
+.goog-te-banner-frame.skiptranslate { display: none !important; }
+body > .skiptranslate { display: none !important; }
+html, body { top: 0 !important; }
+#google_translate_element, .goog-te-gadget, .goog-te-combo { display: none !important; }

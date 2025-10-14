@@ -1,30 +1,22 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "../FreeUser/FreeUser.module.css";
-import FreeUserMobile from "./FreeUserMobile";
 import Modal from "../Modal/Modal";
 import FreeUserMobileNew from "./FreeUserMobileNew";
-import { applyLanguage } from "../GoogleTranslateBoot";
 const languages = [
   { code: "en", name: "English", flag: "https://flagcdn.com/us.svg" },
   { code: "fr", name: "French", flag: "https://flagcdn.com/fr.svg" },
+  { code: "de", name: "German", flag: "https://flagcdn.com/de.svg" },
 ];
 const FreeUser = ({ scrollToHowItWorks, heroSection }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selected, setSelected] = useState(languages[0]);
   const [open, setOpen] = useState(false);
-
-  // useEffect(() => {
-  //   const saved = localStorage.getItem("site_lang") || "en";
-  //   const match = languages.find((l) => l.code === saved);
-  //   if (match) setSelected(match);
-  //   applyLanguage(saved);
-  // }, []);
-  const handleSelect = async (lang) => {
-    setSelected(lang);
+  const handleSelect = (lang) => {
     setOpen(false);
-    // localStorage.setItem("site_lang", lang.code);
-    // await applyLanguage(lang.code);
-    // window.dispatchEvent(new Event("gtranslate:reapply"));
+    if (typeof window !== "undefined" && window.changeGoogleTranslateLanguage) {
+      window.changeGoogleTranslateLanguage(lang.code);
+    }
+    if (lang?.code !== selected?.code) setSelected(lang);
   };
 
   const {
@@ -38,7 +30,6 @@ const FreeUser = ({ scrollToHowItWorks, heroSection }) => {
     cta = {},
     heroGif,
   } = heroSection || {};
-
   const heroGifUrl =
     (typeof heroGif === "string" && heroGif) ||
     heroGif?.url ||
@@ -50,7 +41,7 @@ const FreeUser = ({ scrollToHowItWorks, heroSection }) => {
     cta?.WatchRexUrl || "https://www.youtube.com/embed/qPuwdJjkBms?autoplay=1";
   return (
     <>
-      <div className={`${styles.ForDeskTop} notranslate`} translate="no">
+      <div className={styles.ForDeskTop}>
         <div className={styles.containerBox}>
           <div className={styles.container}>
             <div className={styles.ShapeDiv}>
@@ -99,8 +90,6 @@ const FreeUser = ({ scrollToHowItWorks, heroSection }) => {
                     />
                   )}
                 </div>
-
-                {/* Modal for Video */}
                 <Modal
                   isOpen={isModalOpen}
                   onClose={() => setIsModalOpen(false)}
@@ -125,7 +114,6 @@ const FreeUser = ({ scrollToHowItWorks, heroSection }) => {
               </div>
             </div>
           </div>
-
           <div className={styles.callWrapper}>
             <div className={styles.iconWrapper}>
               <div className={styles.ripple}></div>
@@ -157,19 +145,18 @@ const FreeUser = ({ scrollToHowItWorks, heroSection }) => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M0.646447 1.14645C0.841709 0.951184 1.15829 0.951184 1.35355 1.14645L7 6.79289L12.6464 1.14645C12.8417 0.951184 13.1583 0.951184 13.3536 1.14645C13.5488 1.34171 13.5488 1.65829 13.3536 1.85355L7.35355 7.85355C7.15829 8.04882 6.84171 8.04882 6.64645 7.85355L0.646447 1.85355C0.451184 1.65829 0.451184 1.34171 0.646447 1.14645Z"
                     fill="#24252C"
                     stroke="#24252C"
-                    stroke-width="0.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="0.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </span>
             </button>
-
             <ul className={styles.dropdownMenu}>
               {languages.map((lang) => (
                 <li

@@ -6,9 +6,8 @@ import GoogleTranslateBoot from "./Component/GoogleTranslateBoot";
 function App() {
   return (
     <div className="App">
-      {/* <div id="google_translate_element" style={{ display: "none" }} /> */}
+      <GoogleTranslateBoot />
       <LandingPage />
-      {/* <GoogleTranslateBoot pageLanguage="en" languages={["en", "fr"]} /> */}
     </div>
   );
 }

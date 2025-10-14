@@ -38,6 +38,13 @@ const LandingPage = () => {
   const [getInTouch, setgetInTouch] = useState(null);
   const [faq, setFaq] = useState(null);
   const [footer, setFooter] = useState(null);
+  const [gtVersion, setGtVersion] = useState(0);
+  useEffect(() => {
+    const onLangChange = () => setGtVersion((v) => v + 1);
+    window.addEventListener("gt:changed", onLangChange);
+    return () => window.removeEventListener("gt:changed", onLangChange);
+  }, []);
+
   useEffect(() => {
     let mounted = true;
     (async () => {
@@ -167,7 +174,11 @@ const LandingPage = () => {
           />
         )}
         {faq?.enabled === true && (
-          <FAQ scrollToHowItWorks={scrollToHowItWorks} faq={faq} />
+          <FAQ
+            scrollToHowItWorks={scrollToHowItWorks}
+            faq={faq}
+              key={gtVersion}  
+          />
         )}
         {footer?.enabled === true && <Footer footer={footer} />}
         <Modal
